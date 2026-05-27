@@ -104,7 +104,6 @@ Paginated responses include a `pagination` field:
 | `GET` | `/api/categories/:id` | Single category with ancestor chain |
 | `POST` | `/api/categories` | Create single category |
 | `POST` | `/api/categories/bulk` | Create category + nested children |
-| `PUT` | `/api/categories/upsert` | Create or return existing by name |
 | `PUT` | `/api/categories/:id` | Update name by ID |
 | `DELETE` | `/api/categories/:id` | Delete category + all children |
 | `PATCH` | `/:id/deactivate` | Deactivate + all children (cascade) |
@@ -194,17 +193,6 @@ Content-Type: application/json
 ```
 
 Supports unlimited nesting depth — `children` are recursively created.
-
-### Upsert (by name)
-
-```bash
-PUT /api/categories/upsert
-Content-Type: application/json
-
-{ "name": "Gadgets" }
-```
-
-Creates if name doesn't exist. Returns existing if it does. Supports `parentId`.
 
 ### Update name
 

@@ -166,24 +166,6 @@
       }
     },
     {
-      "name": "Upsert Category (by Name)",
-      "request": {
-        "method": "PUT",
-        "header": [
-          { "key": "Content-Type", "value": "application/json" }
-        ],
-        "url": {
-          "raw": "{{base_url}}/api/categories/upsert",
-          "host": ["{{base_url}}"],
-          "path": ["api", "categories", "upsert"]
-        },
-        "body": {
-          "mode": "raw",
-          "raw": "{\"name\": \"Gadgets\"}"
-        }
-      }
-    },
-    {
       "name": "Update Category Name",
       "request": {
         "method": "PUT",

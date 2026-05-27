@@ -82,17 +82,6 @@ export class CategoryController {
   };
 
   /**
-   * PUT /api/categories/upsert
-   * Creates a category by name if it doesn't exist, otherwise returns existing.
-   */
-  upsertCategory = async (req: Request, res: Response, next: NextFunction) => {
-    try {
-      const data = await service.upsertCategory(req.body);
-      res.status(200).json(ResponseBuilder.success(data, MSG.CATEGORY_UPSERTED));
-    } catch (err) { next(err); }
-  };
-
-  /**
    * PUT /api/categories/:id
    * Updates the name of a category by ID.
    */
@@ -123,7 +112,7 @@ export class CategoryController {
       const result = await service.deactivateCategory(req.params.id);
       res.status(200).json(ResponseBuilder.success(
         result,
-        MSG.CATEGORY_DEACTIVATED(result.categoryName, result.deactivatedCount)
+        MSG.CATEGORY_DEACTIVATED(result.categoryName, result.affectedCount)
       ));
     } catch (err) { next(err); }
   };
@@ -137,7 +126,7 @@ export class CategoryController {
       const result = await service.activateCategory(req.params.id);
       res.status(200).json(ResponseBuilder.success(
         result,
-        MSG.CATEGORY_ACTIVATED(result.categoryName, result.deactivatedCount)
+        MSG.CATEGORY_ACTIVATED(result.categoryName, result.affectedCount)
       ));
     } catch (err) { next(err); }
   };

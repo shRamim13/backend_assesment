@@ -52,8 +52,5 @@ export const api = {
 
   activate: (id: string) => request<DeactivationResult>(`${BASE}/${id}/activate`, { method: 'PATCH' }),
 
-  upsert: (dto: CreateCategoryDto) =>
-    fetch(`${BASE}/upsert`, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(dto) }).then((r) => r.json()) as Promise<ApiResponse<Category>>,
-
   health: () => fetch('/health').then((r) => r.json()) as Promise<HealthStatus>,
 };

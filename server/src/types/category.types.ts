@@ -45,7 +45,7 @@ export interface CategoryTreeNode {
 }
 
 export interface DeactivationResult {
-  deactivatedCount: number;
+  affectedCount: number;
   categoryName: string;
 }
 

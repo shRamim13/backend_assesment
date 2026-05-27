@@ -1,16 +1,21 @@
 import { useEffect, useState } from 'react';
-import { Spin, Tree, Tag, Button, Input, Space, message, Tooltip, Typography, Modal } from 'antd';
-import type { CategoryTreeNode } from '../types';
+import { Spin, Tree, Tag, Button, Space, message, Tooltip, Typography, Modal, Descriptions, Switch, Popconfirm, Select, Input } from 'antd';
+import { EditOutlined, DeleteOutlined } from '@ant-design/icons';
+import type { CategoryTreeNode, CategoryWithAncestors } from '../types';
 import { api } from '../api/categoryApi';
 
 export default function CategoryTreeView() {
   const [tree, setTree] = useState<CategoryTreeNode[]>([]);
   const [loading, setLoading] = useState(true);
-  const [filterId, setFilterId] = useState('');
+  const [searchResults, setSearchResults] = useState<{ value: string; label: string }[]>([]);
+  const [selectedId, setSelectedId] = useState<string | undefined>(undefined);
 
   const [renameModal, setRenameModal] = useState<{ id: string; name: string } | null>(null);
   const [renameValue, setRenameValue] = useState('');
   const [renameLoading, setRenameLoading] = useState(false);
+
+  const [detail, setDetail] = useState<CategoryWithAncestors | null>(null);
+  const [detailLoading, setDetailLoading] = useState(false);
 
   const fetchTree = async (id?: string) => {
     setLoading(true);
@@ -26,6 +31,23 @@ export default function CategoryTreeView() {
 
   useEffect(() => { fetchTree(); }, []);
 
+  const handleSearch = async (query: string) => {
+    if (!query.trim()) { setSearchResults([]); return; }
+    try {
+      const res = await api.getFlat(1, 20, query.trim());
+      const items = (res.data || []).map((c: any) => ({
+        value: c._id,
+        label: `${c.name}${c.ancestorChain?.length ? ` (${c.ancestorChain.map((a: any) => a.name).join(' > ')})` : ''}`,
+      }));
+      setSearchResults(items);
+    } catch { setSearchResults([]); }
+  };
+
+  const handleSelect = (id: string) => {
+    setSelectedId(id);
+    fetchTree(id);
+  };
+
   const handleRename = async () => {
     if (!renameModal) return;
     setRenameLoading(true);
@@ -33,11 +55,42 @@ export default function CategoryTreeView() {
       await api.update(renameModal.id, renameValue);
       message.success('Category renamed');
       setRenameModal(null);
-      fetchTree(filterId || undefined);
+      fetchTree(selectedId);
     } catch (e: any) {
       message.error(e.message);
     }
     setRenameLoading(false);
+  };
+
+  const showDetail = async (id: string) => {
+    setDetailLoading(true);
+    try {
+      const res = await api.getById(id);
+      setDetail(res);
+    } catch (e: any) {
+      message.error(e.message);
+    }
+    setDetailLoading(false);
+  };
+
+  const handleToggle = async (id: string, active: boolean, name: string) => {
+    try {
+      const r = active ? await api.activate(id) : await api.deactivate(id);
+      message.success(`"${name}" ${active ? 'activated' : 'deactivated'} (${r.affectedCount} total)`);
+      fetchTree(selectedId);
+    } catch (e: any) {
+      message.error(e.message);
+    }
+  };
+
+  const handleDelete = async (id: string, name: string) => {
+    try {
+      await api.delete(id);
+      message.success(`"${name}" deleted`);
+      fetchTree(selectedId);
+    } catch (e: any) {
+      message.error(e.message);
+    }
   };
 
   const toAntdNodes = (nodes: CategoryTreeNode[]): any[] =>
@@ -45,12 +98,8 @@ export default function CategoryTreeView() {
       title: (
         <span>
           <Typography.Text
-            copyable={{ text: n._id, tooltips: ['Copy ID', 'Copied!'] }}
             style={{ fontWeight: 500, cursor: 'pointer' }}
-            onClick={() => {
-              setRenameModal({ id: n._id, name: n.name });
-              setRenameValue(n.name);
-            }}
+            onClick={() => showDetail(n._id)}
           >
             {n.name}
           </Typography.Text>
@@ -62,6 +111,13 @@ export default function CategoryTreeView() {
               {n._id.slice(-6)}
             </code>
           </Tooltip>
+          <EditOutlined
+            style={{ marginLeft: 6, color: '#999', cursor: 'pointer' }}
+            onClick={(e) => { e.stopPropagation(); setRenameModal({ id: n._id, name: n.name }); setRenameValue(n.name); }}
+          />
+          <Popconfirm title="Delete this and all children?" onConfirm={() => handleDelete(n._id, n.name)}>
+            <DeleteOutlined style={{ marginLeft: 6, color: '#999', cursor: 'pointer' }} />
+          </Popconfirm>
         </span>
       ),
       key: n._id,
@@ -71,14 +127,20 @@ export default function CategoryTreeView() {
   return (
     <div>
       <Space style={{ marginBottom: 16 }}>
-        <Input
-          placeholder="Paste full 24-char category ID"
-          value={filterId}
-          onChange={(e) => setFilterId(e.target.value.trim())}
-          style={{ width: 320 }}
+        <Select
+          showSearch
+          placeholder="Search category by name"
+          value={selectedId}
+          onSearch={handleSearch}
+          onSelect={handleSelect}
+          onClear={() => { setSelectedId(undefined); setSearchResults([]); fetchTree(); }}
+          allowClear
+          filterOption={false}
+          notFoundContent={null}
+          style={{ width: 400 }}
+          options={searchResults}
         />
-        <Button type="primary" onClick={() => fetchTree(filterId)}>Load Subtree</Button>
-        <Button onClick={() => { setFilterId(''); fetchTree(); }}>Full Tree</Button>
+        <Button onClick={() => { setSelectedId(undefined); setSearchResults([]); fetchTree(); }}>Full Tree</Button>
       </Space>
       {loading ? (
         <Spin size="large" style={{ display: 'block', marginTop: 40 }} />
@@ -100,6 +162,45 @@ export default function CategoryTreeView() {
         confirmLoading={renameLoading}
       >
         <Input value={renameValue} onChange={(e) => setRenameValue(e.target.value)} placeholder="New name" />
+      </Modal>
+      <Modal
+        title={detail?.name || 'Category'}
+        open={!!detail}
+        onCancel={() => setDetail(null)}
+        footer={null}
+        loading={detailLoading}
+        width={600}
+      >
+        {detail && (
+          <Descriptions column={1} bordered size="small">
+            <Descriptions.Item label="ID">{detail._id}</Descriptions.Item>
+            <Descriptions.Item label="Name">{detail.name}</Descriptions.Item>
+            <Descriptions.Item label="Status">
+              <Space>
+                <Tag color={detail.isActive ? 'green' : 'red'}>{detail.isActive ? 'Active' : 'Inactive'}</Tag>
+                <Switch size="small" checked={detail.isActive} onChange={(c) => {
+                  setDetail(null);
+                  handleToggle(detail._id, c, detail.name);
+                }} />
+              </Space>
+            </Descriptions.Item>
+            <Descriptions.Item label="Parent">
+              {detail.parentCategory ? (
+                <span>
+                  <Tag color="blue">{detail.parentCategory.name}</Tag>
+                  <code style={{ fontSize: 11, marginLeft: 6 }}>{detail.parentCategory._id}</code>
+                </span>
+              ) : <Tag>root</Tag>}
+            </Descriptions.Item>
+            <Descriptions.Item label="Ancestor Chain">
+              {detail.ancestorChain && detail.ancestorChain.length > 0
+                ? detail.ancestorChain.map((a) => a.name).join(' > ')
+                : '—'}
+            </Descriptions.Item>
+            <Descriptions.Item label="Created">{new Date(detail.createdAt).toLocaleString()}</Descriptions.Item>
+            <Descriptions.Item label="Updated">{new Date(detail.updatedAt).toLocaleString()}</Descriptions.Item>
+          </Descriptions>
+        )}
       </Modal>
     </div>
   );

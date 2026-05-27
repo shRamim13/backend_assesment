@@ -284,12 +284,13 @@ export class CategoryService {
     const count = await repo.deactivateMany([id, ...descendantIds]);
 
     await cache.invalidateAll();
-    return { deactivatedCount: count, categoryName: category.name };
+    return { affectedCount: count, categoryName: category.name };
   }
 
   /**
-   * Activates a category and all its descendants (cascade down).
+   * Activates a single category.
    * Returns an error if the parent category is inactive.
+   * Does NOT cascade to descendants — only deactivation cascades down.
    */
   async activateCategory(id: string): Promise<DeactivationResult> {
     const category = await repo.findById(id);
@@ -302,11 +303,9 @@ export class CategoryService {
       }
     }
 
-    const descendants = await repo.findDescendants(id);
-    const descendantIds = collectDescendantIdsDFS(descendants, id);
-    const count = await repo.activateMany([id, ...descendantIds]);
+    await repo.activateMany([id]);
 
     await cache.invalidateAll();
-    return { deactivatedCount: count, categoryName: category.name };
+    return { affectedCount: 1, categoryName: category.name };
   }
 }

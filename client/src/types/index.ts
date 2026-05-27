@@ -38,7 +38,7 @@ export interface ApiResponse<T> {
 }
 
 export interface DeactivationResult {
-  deactivatedCount: number;
+  affectedCount: number;
   categoryName: string;
 }
 
