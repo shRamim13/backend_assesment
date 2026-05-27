@@ -1,0 +1,15 @@
+info:
+  name: Activate Category
+  type: http
+  seq: 11
+
+http:
+  method: PATCH
+  url: "{{base_url}}/api/categories/{{categoryId}}/activate"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

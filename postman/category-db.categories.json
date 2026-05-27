@@ -1,0 +1,5694 @@
+[{
+  "_id": {
+    "$oid": "6a16c5e367eeca4e85ced4b7"
+  },
+  "name": "Amazon",
+  "parent": null,
+  "ancestors": [],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:22:27.532Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T11:01:46.386Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c60f67eeca4e85ced4bb"
+  },
+  "name": "Foods",
+  "parent": {
+    "$oid": "6a16c5e367eeca4e85ced4b7"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c5e367eeca4e85ced4b7"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:23:11.580Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T11:01:46.386Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c60f67eeca4e85ced4be"
+  },
+  "name": "Local",
+  "parent": {
+    "$oid": "6a16c60f67eeca4e85ced4bb"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c5e367eeca4e85ced4b7"
+    },
+    {
+      "$oid": "6a16c60f67eeca4e85ced4bb"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:23:11.585Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T11:01:46.386Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c60f67eeca4e85ced4c1"
+  },
+  "name": "Rice",
+  "parent": {
+    "$oid": "6a16c60f67eeca4e85ced4be"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c5e367eeca4e85ced4b7"
+    },
+    {
+      "$oid": "6a16c60f67eeca4e85ced4bb"
+    },
+    {
+      "$oid": "6a16c60f67eeca4e85ced4be"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:23:11.588Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T11:02:05.031Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c60f67eeca4e85ced4c4"
+  },
+  "name": "Fried Rice",
+  "parent": {
+    "$oid": "6a16c60f67eeca4e85ced4c1"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c5e367eeca4e85ced4b7"
+    },
+    {
+      "$oid": "6a16c60f67eeca4e85ced4bb"
+    },
+    {
+      "$oid": "6a16c60f67eeca4e85ced4be"
+    },
+    {
+      "$oid": "6a16c60f67eeca4e85ced4c1"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:23:11.591Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T11:02:05.031Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c60f67eeca4e85ced4c7"
+  },
+  "name": "Chicken Fried Rice",
+  "parent": {
+    "$oid": "6a16c60f67eeca4e85ced4c4"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c5e367eeca4e85ced4b7"
+    },
+    {
+      "$oid": "6a16c60f67eeca4e85ced4bb"
+    },
+    {
+      "$oid": "6a16c60f67eeca4e85ced4be"
+    },
+    {
+      "$oid": "6a16c60f67eeca4e85ced4c1"
+    },
+    {
+      "$oid": "6a16c60f67eeca4e85ced4c4"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:23:11.593Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T11:02:05.031Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c60f67eeca4e85ced4ca"
+  },
+  "name": "Spicy Chicken Fried Rice",
+  "parent": {
+    "$oid": "6a16c60f67eeca4e85ced4c7"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c5e367eeca4e85ced4b7"
+    },
+    {
+      "$oid": "6a16c60f67eeca4e85ced4bb"
+    },
+    {
+      "$oid": "6a16c60f67eeca4e85ced4be"
+    },
+    {
+      "$oid": "6a16c60f67eeca4e85ced4c1"
+    },
+    {
+      "$oid": "6a16c60f67eeca4e85ced4c4"
+    },
+    {
+      "$oid": "6a16c60f67eeca4e85ced4c7"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:23:11.598Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T11:02:05.031Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c60f67eeca4e85ced4cd"
+  },
+  "name": "Fish",
+  "parent": {
+    "$oid": "6a16c60f67eeca4e85ced4be"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c5e367eeca4e85ced4b7"
+    },
+    {
+      "$oid": "6a16c60f67eeca4e85ced4bb"
+    },
+    {
+      "$oid": "6a16c60f67eeca4e85ced4be"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:23:11.604Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T11:01:46.386Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c60f67eeca4e85ced4d0"
+  },
+  "name": "Hilsa",
+  "parent": {
+    "$oid": "6a16c60f67eeca4e85ced4cd"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c5e367eeca4e85ced4b7"
+    },
+    {
+      "$oid": "6a16c60f67eeca4e85ced4bb"
+    },
+    {
+      "$oid": "6a16c60f67eeca4e85ced4be"
+    },
+    {
+      "$oid": "6a16c60f67eeca4e85ced4cd"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:23:11.610Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T11:01:46.386Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c60f67eeca4e85ced4d3"
+  },
+  "name": "Hilsa Curry",
+  "parent": {
+    "$oid": "6a16c60f67eeca4e85ced4d0"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c5e367eeca4e85ced4b7"
+    },
+    {
+      "$oid": "6a16c60f67eeca4e85ced4bb"
+    },
+    {
+      "$oid": "6a16c60f67eeca4e85ced4be"
+    },
+    {
+      "$oid": "6a16c60f67eeca4e85ced4cd"
+    },
+    {
+      "$oid": "6a16c60f67eeca4e85ced4d0"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:23:11.617Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T11:01:46.386Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c60f67eeca4e85ced4d6"
+  },
+  "name": "Mustard Hilsa",
+  "parent": {
+    "$oid": "6a16c60f67eeca4e85ced4d3"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c5e367eeca4e85ced4b7"
+    },
+    {
+      "$oid": "6a16c60f67eeca4e85ced4bb"
+    },
+    {
+      "$oid": "6a16c60f67eeca4e85ced4be"
+    },
+    {
+      "$oid": "6a16c60f67eeca4e85ced4cd"
+    },
+    {
+      "$oid": "6a16c60f67eeca4e85ced4d0"
+    },
+    {
+      "$oid": "6a16c60f67eeca4e85ced4d3"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:23:11.624Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T11:01:46.386Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c60f67eeca4e85ced4d9"
+  },
+  "name": "Chinese",
+  "parent": {
+    "$oid": "6a16c60f67eeca4e85ced4bb"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c5e367eeca4e85ced4b7"
+    },
+    {
+      "$oid": "6a16c60f67eeca4e85ced4bb"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:23:11.630Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T11:01:46.386Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c60f67eeca4e85ced4dc"
+  },
+  "name": "Noodles",
+  "parent": {
+    "$oid": "6a16c60f67eeca4e85ced4d9"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c5e367eeca4e85ced4b7"
+    },
+    {
+      "$oid": "6a16c60f67eeca4e85ced4bb"
+    },
+    {
+      "$oid": "6a16c60f67eeca4e85ced4d9"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:23:11.634Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T11:01:46.386Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c60f67eeca4e85ced4df"
+  },
+  "name": "Chow Mein",
+  "parent": {
+    "$oid": "6a16c60f67eeca4e85ced4dc"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c5e367eeca4e85ced4b7"
+    },
+    {
+      "$oid": "6a16c60f67eeca4e85ced4bb"
+    },
+    {
+      "$oid": "6a16c60f67eeca4e85ced4d9"
+    },
+    {
+      "$oid": "6a16c60f67eeca4e85ced4dc"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:23:11.638Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T11:01:46.386Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c60f67eeca4e85ced4e2"
+  },
+  "name": "Chicken Chow Mein",
+  "parent": {
+    "$oid": "6a16c60f67eeca4e85ced4df"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c5e367eeca4e85ced4b7"
+    },
+    {
+      "$oid": "6a16c60f67eeca4e85ced4bb"
+    },
+    {
+      "$oid": "6a16c60f67eeca4e85ced4d9"
+    },
+    {
+      "$oid": "6a16c60f67eeca4e85ced4dc"
+    },
+    {
+      "$oid": "6a16c60f67eeca4e85ced4df"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:23:11.640Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T11:01:46.386Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c60f67eeca4e85ced4e5"
+  },
+  "name": "Extra Spicy Chicken Chow Mein",
+  "parent": {
+    "$oid": "6a16c60f67eeca4e85ced4e2"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c5e367eeca4e85ced4b7"
+    },
+    {
+      "$oid": "6a16c60f67eeca4e85ced4bb"
+    },
+    {
+      "$oid": "6a16c60f67eeca4e85ced4d9"
+    },
+    {
+      "$oid": "6a16c60f67eeca4e85ced4dc"
+    },
+    {
+      "$oid": "6a16c60f67eeca4e85ced4df"
+    },
+    {
+      "$oid": "6a16c60f67eeca4e85ced4e2"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:23:11.643Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T11:01:46.386Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c60f67eeca4e85ced4e8"
+  },
+  "name": "Soup",
+  "parent": {
+    "$oid": "6a16c60f67eeca4e85ced4d9"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c5e367eeca4e85ced4b7"
+    },
+    {
+      "$oid": "6a16c60f67eeca4e85ced4bb"
+    },
+    {
+      "$oid": "6a16c60f67eeca4e85ced4d9"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:23:11.645Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T11:01:46.386Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c60f67eeca4e85ced4eb"
+  },
+  "name": "Thai Soup",
+  "parent": {
+    "$oid": "6a16c60f67eeca4e85ced4e8"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c5e367eeca4e85ced4b7"
+    },
+    {
+      "$oid": "6a16c60f67eeca4e85ced4bb"
+    },
+    {
+      "$oid": "6a16c60f67eeca4e85ced4d9"
+    },
+    {
+      "$oid": "6a16c60f67eeca4e85ced4e8"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:23:11.647Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T11:01:46.386Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c60f67eeca4e85ced4ee"
+  },
+  "name": "Chicken Thai Soup",
+  "parent": {
+    "$oid": "6a16c60f67eeca4e85ced4eb"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c5e367eeca4e85ced4b7"
+    },
+    {
+      "$oid": "6a16c60f67eeca4e85ced4bb"
+    },
+    {
+      "$oid": "6a16c60f67eeca4e85ced4d9"
+    },
+    {
+      "$oid": "6a16c60f67eeca4e85ced4e8"
+    },
+    {
+      "$oid": "6a16c60f67eeca4e85ced4eb"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:23:11.649Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T11:01:46.386Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c60f67eeca4e85ced4f1"
+  },
+  "name": "Creamy Chicken Thai Soup",
+  "parent": {
+    "$oid": "6a16c60f67eeca4e85ced4ee"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c5e367eeca4e85ced4b7"
+    },
+    {
+      "$oid": "6a16c60f67eeca4e85ced4bb"
+    },
+    {
+      "$oid": "6a16c60f67eeca4e85ced4d9"
+    },
+    {
+      "$oid": "6a16c60f67eeca4e85ced4e8"
+    },
+    {
+      "$oid": "6a16c60f67eeca4e85ced4eb"
+    },
+    {
+      "$oid": "6a16c60f67eeca4e85ced4ee"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:23:11.651Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T11:01:46.386Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c75f67eeca4e85ced4ff"
+  },
+  "name": "Ali Baba",
+  "parent": null,
+  "ancestors": [],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:28:47.262Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:28:47.262Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c8ece7f56955c104fee5"
+  },
+  "name": "Clothing",
+  "parent": {
+    "$oid": "6a16c75f67eeca4e85ced4ff"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:35:24.264Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:35:24.264Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c8ece7f56955c104fee8"
+  },
+  "name": "Men Fashion",
+  "parent": {
+    "$oid": "6a16c8ece7f56955c104fee5"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee5"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:35:24.274Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:35:24.274Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c8ece7f56955c104feeb"
+  },
+  "name": "Top Wear",
+  "parent": {
+    "$oid": "6a16c8ece7f56955c104fee8"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee5"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee8"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:35:24.279Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:35:24.279Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c8ece7f56955c104feee"
+  },
+  "name": "Shirts",
+  "parent": {
+    "$oid": "6a16c8ece7f56955c104feeb"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee5"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee8"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104feeb"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:35:24.284Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:35:24.284Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c8ece7f56955c104fef1"
+  },
+  "name": "Formal Shirts",
+  "parent": {
+    "$oid": "6a16c8ece7f56955c104feee"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee5"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee8"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104feeb"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104feee"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:35:24.288Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:35:24.288Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c8ece7f56955c104fef4"
+  },
+  "name": "Slim Fit Formal Shirts",
+  "parent": {
+    "$oid": "6a16c8ece7f56955c104fef1"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee5"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee8"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104feeb"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104feee"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fef1"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:35:24.290Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:35:24.290Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c8ece7f56955c104fef7"
+  },
+  "name": "Office Wear Shirts",
+  "parent": {
+    "$oid": "6a16c8ece7f56955c104fef4"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee5"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee8"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104feeb"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104feee"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fef1"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fef4"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:35:24.296Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:35:24.296Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c8ece7f56955c104fefa"
+  },
+  "name": "White Office Shirt",
+  "parent": {
+    "$oid": "6a16c8ece7f56955c104fef7"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee5"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee8"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104feeb"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104feee"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fef1"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fef4"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fef7"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:35:24.300Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:35:24.300Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c8ece7f56955c104fefd"
+  },
+  "name": "Sky Blue Office Shirt",
+  "parent": {
+    "$oid": "6a16c8ece7f56955c104fef7"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee5"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee8"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104feeb"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104feee"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fef1"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fef4"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fef7"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:35:24.305Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:35:24.305Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c8ece7f56955c104ff00"
+  },
+  "name": "Black Office Shirt",
+  "parent": {
+    "$oid": "6a16c8ece7f56955c104fef7"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee5"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee8"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104feeb"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104feee"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fef1"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fef4"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fef7"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:35:24.310Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:35:24.310Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c8ece7f56955c104ff03"
+  },
+  "name": "Premium Formal Shirts",
+  "parent": {
+    "$oid": "6a16c8ece7f56955c104fef4"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee5"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee8"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104feeb"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104feee"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fef1"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fef4"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:35:24.316Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:35:24.316Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c8ece7f56955c104ff06"
+  },
+  "name": "Italian Cotton Shirt",
+  "parent": {
+    "$oid": "6a16c8ece7f56955c104ff03"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee5"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee8"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104feeb"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104feee"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fef1"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fef4"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff03"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:35:24.320Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:35:24.320Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c8ece7f56955c104ff09"
+  },
+  "name": "Oxford Premium Shirt",
+  "parent": {
+    "$oid": "6a16c8ece7f56955c104ff03"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee5"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee8"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104feeb"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104feee"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fef1"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fef4"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff03"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:35:24.323Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:35:24.323Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c8ece7f56955c104ff0c"
+  },
+  "name": "Regular Fit Formal Shirts",
+  "parent": {
+    "$oid": "6a16c8ece7f56955c104fef1"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee5"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee8"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104feeb"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104feee"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fef1"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:35:24.328Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:35:24.328Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c8ece7f56955c104ff0f"
+  },
+  "name": "Casual Formal Mix",
+  "parent": {
+    "$oid": "6a16c8ece7f56955c104ff0c"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee5"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee8"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104feeb"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104feee"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fef1"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff0c"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:35:24.332Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:35:24.332Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c8ece7f56955c104ff12"
+  },
+  "name": "Checked Formal Shirt",
+  "parent": {
+    "$oid": "6a16c8ece7f56955c104ff0f"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee5"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee8"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104feeb"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104feee"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fef1"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff0c"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff0f"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:35:24.336Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:35:24.336Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c8ece7f56955c104ff15"
+  },
+  "name": "Striped Formal Shirt",
+  "parent": {
+    "$oid": "6a16c8ece7f56955c104ff0f"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee5"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee8"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104feeb"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104feee"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fef1"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff0c"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff0f"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:35:24.340Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:35:24.340Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c8ece7f56955c104ff18"
+  },
+  "name": "Casual Shirts",
+  "parent": {
+    "$oid": "6a16c8ece7f56955c104feee"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee5"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee8"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104feeb"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104feee"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:35:24.344Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:35:24.344Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c8ece7f56955c104ff1b"
+  },
+  "name": "Denim Shirts",
+  "parent": {
+    "$oid": "6a16c8ece7f56955c104ff18"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee5"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee8"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104feeb"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104feee"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff18"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:35:24.347Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:35:24.347Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c8ece7f56955c104ff1e"
+  },
+  "name": "Light Denim Shirts",
+  "parent": {
+    "$oid": "6a16c8ece7f56955c104ff1b"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee5"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee8"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104feeb"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104feee"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff18"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff1b"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:35:24.349Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:35:24.349Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c8ece7f56955c104ff21"
+  },
+  "name": "Washed Blue Denim Shirt",
+  "parent": {
+    "$oid": "6a16c8ece7f56955c104ff1e"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee5"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee8"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104feeb"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104feee"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff18"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff1b"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff1e"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:35:24.352Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:35:24.352Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c8ece7f56955c104ff24"
+  },
+  "name": "Faded Black Denim Shirt",
+  "parent": {
+    "$oid": "6a16c8ece7f56955c104ff1e"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee5"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee8"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104feeb"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104feee"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff18"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff1b"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff1e"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:35:24.354Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:35:24.354Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c8ece7f56955c104ff27"
+  },
+  "name": "Dark Denim Shirts",
+  "parent": {
+    "$oid": "6a16c8ece7f56955c104ff1b"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee5"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee8"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104feeb"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104feee"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff18"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff1b"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:35:24.356Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:35:24.356Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c8ece7f56955c104ff2a"
+  },
+  "name": "Indigo Denim Shirt",
+  "parent": {
+    "$oid": "6a16c8ece7f56955c104ff27"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee5"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee8"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104feeb"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104feee"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff18"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff1b"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff27"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:35:24.359Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:35:24.359Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c8ece7f56955c104ff2d"
+  },
+  "name": "Jet Black Denim Shirt",
+  "parent": {
+    "$oid": "6a16c8ece7f56955c104ff27"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee5"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee8"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104feeb"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104feee"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff18"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff1b"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff27"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:35:24.363Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:35:24.363Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c8ece7f56955c104ff30"
+  },
+  "name": "Bottom Wear",
+  "parent": {
+    "$oid": "6a16c8ece7f56955c104fee8"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee5"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee8"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:35:24.365Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:35:24.365Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c8ece7f56955c104ff33"
+  },
+  "name": "Jeans",
+  "parent": {
+    "$oid": "6a16c8ece7f56955c104ff30"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee5"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee8"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff30"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:35:24.368Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:35:24.368Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c8ece7f56955c104ff36"
+  },
+  "name": "Slim Jeans",
+  "parent": {
+    "$oid": "6a16c8ece7f56955c104ff33"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee5"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee8"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff30"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff33"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:35:24.370Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:35:24.370Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c8ece7f56955c104ff39"
+  },
+  "name": "Light Wash Slim Jeans",
+  "parent": {
+    "$oid": "6a16c8ece7f56955c104ff36"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee5"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee8"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff30"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff33"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff36"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:35:24.372Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:35:24.372Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c8ece7f56955c104ff3c"
+  },
+  "name": "Distressed Light Jeans",
+  "parent": {
+    "$oid": "6a16c8ece7f56955c104ff39"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee5"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee8"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff30"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff33"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff36"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff39"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:35:24.374Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:35:24.374Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c8ece7f56955c104ff3f"
+  },
+  "name": "Clean Light Jeans",
+  "parent": {
+    "$oid": "6a16c8ece7f56955c104ff39"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee5"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee8"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff30"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff33"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff36"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff39"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:35:24.377Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:35:24.377Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c8ece7f56955c104ff42"
+  },
+  "name": "Dark Wash Slim Jeans",
+  "parent": {
+    "$oid": "6a16c8ece7f56955c104ff36"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee5"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee8"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff30"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff33"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff36"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:35:24.379Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:35:24.379Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c8ece7f56955c104ff45"
+  },
+  "name": "Black Slim Jeans",
+  "parent": {
+    "$oid": "6a16c8ece7f56955c104ff42"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee5"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee8"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff30"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff33"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff36"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff42"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:35:24.380Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:35:24.380Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c8ece7f56955c104ff48"
+  },
+  "name": "Deep Blue Slim Jeans",
+  "parent": {
+    "$oid": "6a16c8ece7f56955c104ff42"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee5"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee8"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff30"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff33"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff36"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff42"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:35:24.382Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:35:24.382Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c8ece7f56955c104ff4b"
+  },
+  "name": "Regular Jeans",
+  "parent": {
+    "$oid": "6a16c8ece7f56955c104ff33"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee5"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee8"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff30"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff33"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:35:24.384Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:35:24.384Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c8ece7f56955c104ff4e"
+  },
+  "name": "Classic Fit",
+  "parent": {
+    "$oid": "6a16c8ece7f56955c104ff4b"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee5"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee8"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff30"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff33"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff4b"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:35:24.386Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:35:24.386Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c8ece7f56955c104ff51"
+  },
+  "name": "Blue Regular Jeans",
+  "parent": {
+    "$oid": "6a16c8ece7f56955c104ff4e"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee5"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee8"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff30"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff33"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff4b"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff4e"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:35:24.388Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:35:24.388Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c8ece7f56955c104ff54"
+  },
+  "name": "Grey Regular Jeans",
+  "parent": {
+    "$oid": "6a16c8ece7f56955c104ff4e"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee5"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee8"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff30"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff33"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff4b"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff4e"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:35:24.390Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:35:24.390Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c8ece7f56955c104ff57"
+  },
+  "name": "Women Fashion",
+  "parent": {
+    "$oid": "6a16c8ece7f56955c104fee5"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee5"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:35:24.391Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:35:24.391Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c8ece7f56955c104ff5a"
+  },
+  "name": "Western Wear",
+  "parent": {
+    "$oid": "6a16c8ece7f56955c104ff57"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee5"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff57"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:35:24.393Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:35:24.393Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c8ece7f56955c104ff5d"
+  },
+  "name": "Dresses",
+  "parent": {
+    "$oid": "6a16c8ece7f56955c104ff5a"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee5"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff57"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff5a"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:35:24.395Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:35:24.395Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c8ece7f56955c104ff60"
+  },
+  "name": "Evening Dresses",
+  "parent": {
+    "$oid": "6a16c8ece7f56955c104ff5d"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee5"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff57"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff5a"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff5d"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:35:24.396Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:35:24.396Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c8ece7f56955c104ff63"
+  },
+  "name": "Designer Evening Dresses",
+  "parent": {
+    "$oid": "6a16c8ece7f56955c104ff60"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee5"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff57"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff5a"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff5d"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff60"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:35:24.398Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:35:24.398Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c8ece7f56955c104ff66"
+  },
+  "name": "Luxury Silk Dresses",
+  "parent": {
+    "$oid": "6a16c8ece7f56955c104ff63"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee5"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff57"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff5a"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff5d"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff60"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff63"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:35:24.399Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:35:24.399Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c8ece7f56955c104ff69"
+  },
+  "name": "Red Silk Dress",
+  "parent": {
+    "$oid": "6a16c8ece7f56955c104ff66"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee5"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff57"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff5a"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff5d"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff60"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff63"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff66"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:35:24.400Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:35:24.400Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c8ece7f56955c104ff6c"
+  },
+  "name": "Black Silk Dress",
+  "parent": {
+    "$oid": "6a16c8ece7f56955c104ff66"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee5"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff57"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff5a"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff5d"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff60"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff63"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff66"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:35:24.402Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:35:24.402Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c8ece7f56955c104ff6f"
+  },
+  "name": "Golden Silk Dress",
+  "parent": {
+    "$oid": "6a16c8ece7f56955c104ff66"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee5"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff57"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff5a"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff5d"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff60"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff63"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff66"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:35:24.404Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:35:24.404Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c8ece7f56955c104ff72"
+  },
+  "name": "Casual Dresses",
+  "parent": {
+    "$oid": "6a16c8ece7f56955c104ff5d"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee5"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff57"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff5a"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff5d"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:35:24.406Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:35:24.406Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c8ece7f56955c104ff75"
+  },
+  "name": "Floral Dresses",
+  "parent": {
+    "$oid": "6a16c8ece7f56955c104ff72"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee5"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff57"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff5a"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff5d"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff72"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:35:24.407Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:35:24.407Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c8ece7f56955c104ff78"
+  },
+  "name": "Summer Floral Dress",
+  "parent": {
+    "$oid": "6a16c8ece7f56955c104ff75"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee5"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff57"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff5a"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff5d"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff72"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff75"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:35:24.409Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:35:24.409Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c8ece7f56955c104ff7b"
+  },
+  "name": "Light Cotton Floral Dress",
+  "parent": {
+    "$oid": "6a16c8ece7f56955c104ff78"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee5"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff57"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff5a"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff5d"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff72"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff75"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff78"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:35:24.411Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:35:24.411Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16c8ece7f56955c104ff7e"
+  },
+  "name": "Beach Floral Dress",
+  "parent": {
+    "$oid": "6a16c8ece7f56955c104ff78"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104fee5"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff57"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff5a"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff5d"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff72"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff75"
+    },
+    {
+      "$oid": "6a16c8ece7f56955c104ff78"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:35:24.412Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:35:24.412Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cabf63b4dee7e8e01d1f"
+  },
+  "name": "Gaming",
+  "parent": {
+    "$oid": "6a16c75f67eeca4e85ced4ff"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:43:11.046Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:43:11.046Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cabf63b4dee7e8e01d22"
+  },
+  "name": "PC Gaming",
+  "parent": {
+    "$oid": "6a16cabf63b4dee7e8e01d1f"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d1f"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:43:11.058Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:43:11.058Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cabf63b4dee7e8e01d25"
+  },
+  "name": "Action Games",
+  "parent": {
+    "$oid": "6a16cabf63b4dee7e8e01d22"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d1f"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d22"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:43:11.065Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:43:11.065Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cabf63b4dee7e8e01d28"
+  },
+  "name": "Shooter Games",
+  "parent": {
+    "$oid": "6a16cabf63b4dee7e8e01d25"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d1f"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d22"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d25"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:43:11.074Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:43:11.074Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cabf63b4dee7e8e01d2b"
+  },
+  "name": "FPS Games",
+  "parent": {
+    "$oid": "6a16cabf63b4dee7e8e01d28"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d1f"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d22"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d25"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d28"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:43:11.080Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:43:11.080Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cabf63b4dee7e8e01d2e"
+  },
+  "name": "Competitive FPS",
+  "parent": {
+    "$oid": "6a16cabf63b4dee7e8e01d2b"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d1f"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d22"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d25"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d28"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d2b"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:43:11.085Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:43:11.085Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cabf63b4dee7e8e01d31"
+  },
+  "name": "CS2 Skins",
+  "parent": {
+    "$oid": "6a16cabf63b4dee7e8e01d2e"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d1f"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d22"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d25"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d28"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d2b"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d2e"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:43:11.090Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:43:11.090Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cabf63b4dee7e8e01d34"
+  },
+  "name": "Valorant Bundles",
+  "parent": {
+    "$oid": "6a16cabf63b4dee7e8e01d2e"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d1f"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d22"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d25"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d28"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d2b"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d2e"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:43:11.093Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:43:11.093Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cabf63b4dee7e8e01d37"
+  },
+  "name": "Apex Legends Items",
+  "parent": {
+    "$oid": "6a16cabf63b4dee7e8e01d2e"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d1f"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d22"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d25"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d28"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d2b"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d2e"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:43:11.098Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:43:11.098Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cabf63b4dee7e8e01d3a"
+  },
+  "name": "Mobile Gaming",
+  "parent": {
+    "$oid": "6a16cabf63b4dee7e8e01d1f"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d1f"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:43:11.105Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:43:11.105Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cabf63b4dee7e8e01d3d"
+  },
+  "name": "Battle Royale",
+  "parent": {
+    "$oid": "6a16cabf63b4dee7e8e01d3a"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d1f"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d3a"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:43:11.113Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:43:11.113Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cabf63b4dee7e8e01d40"
+  },
+  "name": "PUBG Mobile Skins",
+  "parent": {
+    "$oid": "6a16cabf63b4dee7e8e01d3d"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d1f"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d3a"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d3d"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:43:11.120Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:43:11.120Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cabf63b4dee7e8e01d43"
+  },
+  "name": "Gun Skins",
+  "parent": {
+    "$oid": "6a16cabf63b4dee7e8e01d40"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d1f"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d3a"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d3d"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d40"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:43:11.128Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:43:11.128Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cabf63b4dee7e8e01d46"
+  },
+  "name": "Outfits",
+  "parent": {
+    "$oid": "6a16cabf63b4dee7e8e01d40"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d1f"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d3a"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d3d"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d40"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:43:11.137Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:43:11.137Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cabf63b4dee7e8e01d49"
+  },
+  "name": "Emotes",
+  "parent": {
+    "$oid": "6a16cabf63b4dee7e8e01d40"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d1f"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d3a"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d3d"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d40"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:43:11.143Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:43:11.143Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cabf63b4dee7e8e01d4c"
+  },
+  "name": "Movies & Entertainment",
+  "parent": {
+    "$oid": "6a16c75f67eeca4e85ced4ff"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:43:11.149Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:43:11.149Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cabf63b4dee7e8e01d4f"
+  },
+  "name": "Movies",
+  "parent": {
+    "$oid": "6a16cabf63b4dee7e8e01d4c"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d4c"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:43:11.156Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:43:11.156Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cabf63b4dee7e8e01d52"
+  },
+  "name": "Hollywood",
+  "parent": {
+    "$oid": "6a16cabf63b4dee7e8e01d4f"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d4c"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d4f"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:43:11.162Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:43:11.162Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cabf63b4dee7e8e01d55"
+  },
+  "name": "Marvel Universe",
+  "parent": {
+    "$oid": "6a16cabf63b4dee7e8e01d52"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d4c"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d4f"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d52"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:43:11.168Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:43:11.168Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cabf63b4dee7e8e01d58"
+  },
+  "name": "Avengers Collection",
+  "parent": {
+    "$oid": "6a16cabf63b4dee7e8e01d55"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d4c"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d4f"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d52"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d55"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:43:11.174Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:43:11.174Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cabf63b4dee7e8e01d5b"
+  },
+  "name": "Iron Man Series",
+  "parent": {
+    "$oid": "6a16cabf63b4dee7e8e01d58"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d4c"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d4f"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d52"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d55"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d58"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:43:11.179Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:43:11.179Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cabf63b4dee7e8e01d5e"
+  },
+  "name": "Spider-Man Series",
+  "parent": {
+    "$oid": "6a16cabf63b4dee7e8e01d58"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d4c"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d4f"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d52"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d55"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d58"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:43:11.182Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:43:11.182Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cabf63b4dee7e8e01d61"
+  },
+  "name": "Streaming",
+  "parent": {
+    "$oid": "6a16cabf63b4dee7e8e01d4c"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d4c"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:43:11.186Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:43:11.186Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cabf63b4dee7e8e01d64"
+  },
+  "name": "Netflix",
+  "parent": {
+    "$oid": "6a16cabf63b4dee7e8e01d61"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d4c"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d61"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:43:11.189Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:43:11.189Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cabf63b4dee7e8e01d67"
+  },
+  "name": "Popular Series",
+  "parent": {
+    "$oid": "6a16cabf63b4dee7e8e01d64"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d4c"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d61"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d64"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:43:11.193Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:43:11.193Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cabf63b4dee7e8e01d6a"
+  },
+  "name": "Stranger Things",
+  "parent": {
+    "$oid": "6a16cabf63b4dee7e8e01d67"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d4c"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d61"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d64"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d67"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:43:11.197Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:43:11.197Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cabf63b4dee7e8e01d6d"
+  },
+  "name": "Money Heist",
+  "parent": {
+    "$oid": "6a16cabf63b4dee7e8e01d67"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d4c"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d61"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d64"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d67"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:43:11.200Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:43:11.200Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cabf63b4dee7e8e01d70"
+  },
+  "name": "Dark",
+  "parent": {
+    "$oid": "6a16cabf63b4dee7e8e01d67"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d4c"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d61"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d64"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d67"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:43:11.204Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:43:11.204Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cabf63b4dee7e8e01d73"
+  },
+  "name": "Sports",
+  "parent": {
+    "$oid": "6a16c75f67eeca4e85ced4ff"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:43:11.207Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:43:11.207Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cabf63b4dee7e8e01d76"
+  },
+  "name": "Football",
+  "parent": {
+    "$oid": "6a16cabf63b4dee7e8e01d73"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d73"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:43:11.211Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:43:11.211Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cabf63b4dee7e8e01d79"
+  },
+  "name": "Premier League",
+  "parent": {
+    "$oid": "6a16cabf63b4dee7e8e01d76"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d73"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d76"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:43:11.215Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:43:11.215Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cabf63b4dee7e8e01d7c"
+  },
+  "name": "Top Clubs",
+  "parent": {
+    "$oid": "6a16cabf63b4dee7e8e01d79"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d73"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d76"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d79"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:43:11.218Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:43:11.218Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cabf63b4dee7e8e01d7f"
+  },
+  "name": "Manchester United Kits",
+  "parent": {
+    "$oid": "6a16cabf63b4dee7e8e01d7c"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d73"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d76"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d79"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d7c"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:43:11.221Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:43:11.221Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cabf63b4dee7e8e01d82"
+  },
+  "name": "Arsenal Kits",
+  "parent": {
+    "$oid": "6a16cabf63b4dee7e8e01d7c"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d73"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d76"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d79"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d7c"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:43:11.225Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:43:11.225Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cabf63b4dee7e8e01d85"
+  },
+  "name": "Chelsea Kits",
+  "parent": {
+    "$oid": "6a16cabf63b4dee7e8e01d7c"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d73"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d76"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d79"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d7c"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:43:11.229Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:43:11.229Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cabf63b4dee7e8e01d88"
+  },
+  "name": "Cricket",
+  "parent": {
+    "$oid": "6a16cabf63b4dee7e8e01d73"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d73"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:43:11.232Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:43:11.232Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cabf63b4dee7e8e01d8b"
+  },
+  "name": "IPL",
+  "parent": {
+    "$oid": "6a16cabf63b4dee7e8e01d88"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d73"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d88"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:43:11.236Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:43:11.236Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cabf63b4dee7e8e01d8e"
+  },
+  "name": "RCB Jerseys",
+  "parent": {
+    "$oid": "6a16cabf63b4dee7e8e01d8b"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d73"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d88"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d8b"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:43:11.238Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:43:11.238Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cabf63b4dee7e8e01d91"
+  },
+  "name": "MI Jerseys",
+  "parent": {
+    "$oid": "6a16cabf63b4dee7e8e01d8b"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d73"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d88"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d8b"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:43:11.241Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:43:11.241Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cabf63b4dee7e8e01d94"
+  },
+  "name": "CSK Jerseys",
+  "parent": {
+    "$oid": "6a16cabf63b4dee7e8e01d8b"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d73"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d88"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d8b"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:43:11.244Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:43:11.244Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cabf63b4dee7e8e01d97"
+  },
+  "name": "Recreation",
+  "parent": {
+    "$oid": "6a16c75f67eeca4e85ced4ff"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:43:11.246Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:43:11.246Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cabf63b4dee7e8e01d9a"
+  },
+  "name": "Indoor Games",
+  "parent": {
+    "$oid": "6a16cabf63b4dee7e8e01d97"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d97"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:43:11.249Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:43:11.249Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cabf63b4dee7e8e01d9d"
+  },
+  "name": "Chess",
+  "parent": {
+    "$oid": "6a16cabf63b4dee7e8e01d9a"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d97"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d9a"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:43:11.254Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:43:11.254Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cabf63b4dee7e8e01da0"
+  },
+  "name": "Wooden Chess Board",
+  "parent": {
+    "$oid": "6a16cabf63b4dee7e8e01d9d"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d97"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d9a"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d9d"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:43:11.258Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:43:11.258Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cabf63b4dee7e8e01da3"
+  },
+  "name": "Magnetic Chess Set",
+  "parent": {
+    "$oid": "6a16cabf63b4dee7e8e01d9d"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d97"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d9a"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d9d"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:43:11.264Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:43:11.264Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cabf63b4dee7e8e01da6"
+  },
+  "name": "Travel Chess Set",
+  "parent": {
+    "$oid": "6a16cabf63b4dee7e8e01d9d"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d97"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d9a"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d9d"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:43:11.268Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:43:11.268Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cabf63b4dee7e8e01da9"
+  },
+  "name": "Outdoor Activities",
+  "parent": {
+    "$oid": "6a16cabf63b4dee7e8e01d97"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d97"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:43:11.273Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:43:11.273Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cabf63b4dee7e8e01dac"
+  },
+  "name": "Adventure Sports",
+  "parent": {
+    "$oid": "6a16cabf63b4dee7e8e01da9"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d97"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01da9"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:43:11.277Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:43:11.277Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cabf63b4dee7e8e01daf"
+  },
+  "name": "Kayaking",
+  "parent": {
+    "$oid": "6a16cabf63b4dee7e8e01dac"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d97"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01da9"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01dac"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:43:11.281Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:43:11.281Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cabf63b4dee7e8e01db2"
+  },
+  "name": "River Kayak Gear",
+  "parent": {
+    "$oid": "6a16cabf63b4dee7e8e01daf"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d97"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01da9"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01dac"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01daf"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:43:11.284Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:43:11.284Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cabf63b4dee7e8e01db5"
+  },
+  "name": "Ocean Kayak Set",
+  "parent": {
+    "$oid": "6a16cabf63b4dee7e8e01daf"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16c75f67eeca4e85ced4ff"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01d97"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01da9"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01dac"
+    },
+    {
+      "$oid": "6a16cabf63b4dee7e8e01daf"
+    }
+  ],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:43:11.288Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:43:11.288Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cb2163b4dee7e8e01db8"
+  },
+  "name": "Transport",
+  "parent": null,
+  "ancestors": [],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:44:49.262Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:46:53.670Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cb4d63b4dee7e8e01dbc"
+  },
+  "name": "Automotive",
+  "parent": {
+    "$oid": "6a16cb2163b4dee7e8e01db8"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16cb2163b4dee7e8e01db8"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:45:33.719Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:46:53.670Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cb4d63b4dee7e8e01dbf"
+  },
+  "name": "Cars",
+  "parent": {
+    "$oid": "6a16cb4d63b4dee7e8e01dbc"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16cb2163b4dee7e8e01db8"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbc"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:45:33.726Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:46:53.670Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cb4d63b4dee7e8e01dc2"
+  },
+  "name": "Hatchback",
+  "parent": {
+    "$oid": "6a16cb4d63b4dee7e8e01dbf"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16cb2163b4dee7e8e01db8"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbc"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbf"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:45:33.732Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:46:53.670Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cb4d63b4dee7e8e01dc5"
+  },
+  "name": "City Hatchback",
+  "parent": {
+    "$oid": "6a16cb4d63b4dee7e8e01dc2"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16cb2163b4dee7e8e01db8"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbc"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbf"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dc2"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:45:33.739Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:46:53.670Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cb4d63b4dee7e8e01dc8"
+  },
+  "name": "Fuel Efficient Cars",
+  "parent": {
+    "$oid": "6a16cb4d63b4dee7e8e01dc5"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16cb2163b4dee7e8e01db8"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbc"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbf"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dc2"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dc5"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:45:33.746Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:46:53.670Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cb4d63b4dee7e8e01dcb"
+  },
+  "name": "Toyota Yaris",
+  "parent": {
+    "$oid": "6a16cb4d63b4dee7e8e01dc8"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16cb2163b4dee7e8e01db8"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbc"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbf"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dc2"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dc5"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dc8"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:45:33.753Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:46:53.670Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cb4d63b4dee7e8e01dce"
+  },
+  "name": "Hyundai i20",
+  "parent": {
+    "$oid": "6a16cb4d63b4dee7e8e01dc8"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16cb2163b4dee7e8e01db8"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbc"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbf"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dc2"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dc5"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dc8"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:45:33.757Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:46:53.670Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cb4d63b4dee7e8e01dd1"
+  },
+  "name": "Suzuki Swift",
+  "parent": {
+    "$oid": "6a16cb4d63b4dee7e8e01dc8"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16cb2163b4dee7e8e01db8"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbc"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbf"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dc2"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dc5"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dc8"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:45:33.760Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:46:53.670Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cb4d63b4dee7e8e01dd4"
+  },
+  "name": "Premium Hatchback",
+  "parent": {
+    "$oid": "6a16cb4d63b4dee7e8e01dc2"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16cb2163b4dee7e8e01db8"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbc"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbf"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dc2"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:45:33.763Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:46:53.670Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cb4d63b4dee7e8e01dd7"
+  },
+  "name": "Urban Premium Cars",
+  "parent": {
+    "$oid": "6a16cb4d63b4dee7e8e01dd4"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16cb2163b4dee7e8e01db8"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbc"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbf"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dc2"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dd4"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:45:33.765Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:46:53.670Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cb4d63b4dee7e8e01dda"
+  },
+  "name": "Mini Cooper",
+  "parent": {
+    "$oid": "6a16cb4d63b4dee7e8e01dd7"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16cb2163b4dee7e8e01db8"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbc"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbf"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dc2"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dd4"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dd7"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:45:33.767Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:46:53.670Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cb4d63b4dee7e8e01ddd"
+  },
+  "name": "Volkswagen Polo GTI",
+  "parent": {
+    "$oid": "6a16cb4d63b4dee7e8e01dd7"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16cb2163b4dee7e8e01db8"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbc"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbf"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dc2"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dd4"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dd7"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:45:33.771Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:46:53.670Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cb4d63b4dee7e8e01de0"
+  },
+  "name": "Sedan",
+  "parent": {
+    "$oid": "6a16cb4d63b4dee7e8e01dbf"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16cb2163b4dee7e8e01db8"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbc"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbf"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:45:33.775Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:46:53.670Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cb4d63b4dee7e8e01de3"
+  },
+  "name": "Mid Range Sedan",
+  "parent": {
+    "$oid": "6a16cb4d63b4dee7e8e01de0"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16cb2163b4dee7e8e01db8"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbc"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbf"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01de0"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:45:33.779Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:46:53.670Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cb4d63b4dee7e8e01de6"
+  },
+  "name": "Family Sedans",
+  "parent": {
+    "$oid": "6a16cb4d63b4dee7e8e01de3"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16cb2163b4dee7e8e01db8"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbc"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbf"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01de0"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01de3"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:45:33.783Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:46:53.670Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cb4d63b4dee7e8e01de9"
+  },
+  "name": "Honda Accord",
+  "parent": {
+    "$oid": "6a16cb4d63b4dee7e8e01de6"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16cb2163b4dee7e8e01db8"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbc"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbf"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01de0"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01de3"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01de6"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:45:33.787Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:46:53.670Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cb4d63b4dee7e8e01dec"
+  },
+  "name": "Toyota Camry",
+  "parent": {
+    "$oid": "6a16cb4d63b4dee7e8e01de6"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16cb2163b4dee7e8e01db8"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbc"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbf"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01de0"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01de3"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01de6"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:45:33.792Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:46:53.670Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cb4d63b4dee7e8e01def"
+  },
+  "name": "Hyundai Sonata",
+  "parent": {
+    "$oid": "6a16cb4d63b4dee7e8e01de6"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16cb2163b4dee7e8e01db8"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbc"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbf"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01de0"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01de3"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01de6"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:45:33.799Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:46:53.670Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cb4d63b4dee7e8e01df2"
+  },
+  "name": "Luxury Sedan",
+  "parent": {
+    "$oid": "6a16cb4d63b4dee7e8e01de0"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16cb2163b4dee7e8e01db8"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbc"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbf"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01de0"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:45:33.807Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:46:53.670Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cb4d63b4dee7e8e01df5"
+  },
+  "name": "Executive Class",
+  "parent": {
+    "$oid": "6a16cb4d63b4dee7e8e01df2"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16cb2163b4dee7e8e01db8"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbc"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbf"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01de0"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01df2"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:45:33.813Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:46:53.670Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cb4d63b4dee7e8e01df8"
+  },
+  "name": "BMW 7 Series",
+  "parent": {
+    "$oid": "6a16cb4d63b4dee7e8e01df5"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16cb2163b4dee7e8e01db8"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbc"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbf"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01de0"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01df2"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01df5"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:45:33.816Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:46:53.670Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cb4d63b4dee7e8e01dfb"
+  },
+  "name": "Mercedes S-Class",
+  "parent": {
+    "$oid": "6a16cb4d63b4dee7e8e01df5"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16cb2163b4dee7e8e01db8"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbc"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbf"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01de0"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01df2"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01df5"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:45:33.821Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:46:53.670Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cb4d63b4dee7e8e01dfe"
+  },
+  "name": "Audi A8",
+  "parent": {
+    "$oid": "6a16cb4d63b4dee7e8e01df5"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16cb2163b4dee7e8e01db8"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbc"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbf"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01de0"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01df2"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01df5"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:45:33.826Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:46:53.670Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cb4d63b4dee7e8e01e01"
+  },
+  "name": "SUV",
+  "parent": {
+    "$oid": "6a16cb4d63b4dee7e8e01dbf"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16cb2163b4dee7e8e01db8"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbc"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbf"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:45:33.833Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:46:53.670Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cb4d63b4dee7e8e01e04"
+  },
+  "name": "Compact SUV",
+  "parent": {
+    "$oid": "6a16cb4d63b4dee7e8e01e01"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16cb2163b4dee7e8e01db8"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbc"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbf"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e01"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:45:33.837Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:46:53.670Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cb4d63b4dee7e8e01e07"
+  },
+  "name": "Urban SUVs",
+  "parent": {
+    "$oid": "6a16cb4d63b4dee7e8e01e04"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16cb2163b4dee7e8e01db8"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbc"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbf"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e01"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e04"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:45:33.840Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:46:53.670Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cb4d63b4dee7e8e01e0a"
+  },
+  "name": "Honda HR-V",
+  "parent": {
+    "$oid": "6a16cb4d63b4dee7e8e01e07"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16cb2163b4dee7e8e01db8"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbc"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbf"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e01"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e04"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e07"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:45:33.846Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:46:53.670Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cb4d63b4dee7e8e01e0d"
+  },
+  "name": "Mazda CX-30",
+  "parent": {
+    "$oid": "6a16cb4d63b4dee7e8e01e07"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16cb2163b4dee7e8e01db8"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbc"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbf"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e01"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e04"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e07"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:45:33.851Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:46:53.670Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cb4d63b4dee7e8e01e10"
+  },
+  "name": "Nissan Kicks",
+  "parent": {
+    "$oid": "6a16cb4d63b4dee7e8e01e07"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16cb2163b4dee7e8e01db8"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbc"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbf"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e01"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e04"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e07"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:45:33.855Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:46:53.670Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cb4d63b4dee7e8e01e13"
+  },
+  "name": "Full Size SUV",
+  "parent": {
+    "$oid": "6a16cb4d63b4dee7e8e01e01"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16cb2163b4dee7e8e01db8"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbc"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbf"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e01"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:45:33.858Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:46:53.670Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cb4d63b4dee7e8e01e16"
+  },
+  "name": "Luxury SUVs",
+  "parent": {
+    "$oid": "6a16cb4d63b4dee7e8e01e13"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16cb2163b4dee7e8e01db8"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbc"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbf"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e01"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e13"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:45:33.862Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:46:53.670Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cb4d63b4dee7e8e01e19"
+  },
+  "name": "Range Rover Vogue",
+  "parent": {
+    "$oid": "6a16cb4d63b4dee7e8e01e16"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16cb2163b4dee7e8e01db8"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbc"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbf"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e01"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e13"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e16"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:45:33.864Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:46:53.670Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cb4d63b4dee7e8e01e1c"
+  },
+  "name": "BMW X7",
+  "parent": {
+    "$oid": "6a16cb4d63b4dee7e8e01e16"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16cb2163b4dee7e8e01db8"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbc"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbf"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e01"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e13"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e16"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:45:33.866Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:46:53.670Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cb4d63b4dee7e8e01e1f"
+  },
+  "name": "Mercedes GLS",
+  "parent": {
+    "$oid": "6a16cb4d63b4dee7e8e01e16"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16cb2163b4dee7e8e01db8"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbc"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbf"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e01"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e13"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e16"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:45:33.868Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:46:53.670Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cb4d63b4dee7e8e01e22"
+  },
+  "name": "Sports Cars",
+  "parent": {
+    "$oid": "6a16cb4d63b4dee7e8e01dbf"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16cb2163b4dee7e8e01db8"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbc"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbf"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:45:33.872Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:46:53.670Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cb4d63b4dee7e8e01e25"
+  },
+  "name": "Supercars",
+  "parent": {
+    "$oid": "6a16cb4d63b4dee7e8e01e22"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16cb2163b4dee7e8e01db8"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbc"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbf"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e22"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:45:33.878Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:46:53.670Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cb4d63b4dee7e8e01e28"
+  },
+  "name": "High Performance",
+  "parent": {
+    "$oid": "6a16cb4d63b4dee7e8e01e25"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16cb2163b4dee7e8e01db8"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbc"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbf"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e22"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e25"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:45:33.884Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:46:53.670Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cb4d63b4dee7e8e01e2b"
+  },
+  "name": "Lamborghini Aventador",
+  "parent": {
+    "$oid": "6a16cb4d63b4dee7e8e01e28"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16cb2163b4dee7e8e01db8"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbc"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbf"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e22"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e25"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e28"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:45:33.891Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:46:53.670Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cb4d63b4dee7e8e01e2e"
+  },
+  "name": "Ferrari F8 Tributo",
+  "parent": {
+    "$oid": "6a16cb4d63b4dee7e8e01e28"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16cb2163b4dee7e8e01db8"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbc"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbf"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e22"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e25"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e28"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:45:33.895Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:46:53.670Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cb4d63b4dee7e8e01e31"
+  },
+  "name": "McLaren Artura",
+  "parent": {
+    "$oid": "6a16cb4d63b4dee7e8e01e28"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16cb2163b4dee7e8e01db8"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbc"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbf"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e22"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e25"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e28"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:45:33.898Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:46:53.670Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cb4d63b4dee7e8e01e34"
+  },
+  "name": "Motorcycles",
+  "parent": {
+    "$oid": "6a16cb4d63b4dee7e8e01dbc"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16cb2163b4dee7e8e01db8"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbc"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:45:33.901Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:46:53.670Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cb4d63b4dee7e8e01e37"
+  },
+  "name": "Standard Bikes",
+  "parent": {
+    "$oid": "6a16cb4d63b4dee7e8e01e34"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16cb2163b4dee7e8e01db8"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbc"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e34"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:45:33.905Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:46:53.670Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cb4d63b4dee7e8e01e3a"
+  },
+  "name": "Commuter Bikes",
+  "parent": {
+    "$oid": "6a16cb4d63b4dee7e8e01e37"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16cb2163b4dee7e8e01db8"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbc"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e34"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e37"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:45:33.909Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:46:53.670Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cb4d63b4dee7e8e01e3d"
+  },
+  "name": "Honda CB Shine",
+  "parent": {
+    "$oid": "6a16cb4d63b4dee7e8e01e3a"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16cb2163b4dee7e8e01db8"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbc"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e34"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e37"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e3a"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:45:33.914Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:46:53.670Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cb4d63b4dee7e8e01e40"
+  },
+  "name": "Yamaha FZ",
+  "parent": {
+    "$oid": "6a16cb4d63b4dee7e8e01e3a"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16cb2163b4dee7e8e01db8"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbc"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e34"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e37"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e3a"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:45:33.919Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:46:53.670Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cb4d63b4dee7e8e01e43"
+  },
+  "name": "Bajaj Pulsar",
+  "parent": {
+    "$oid": "6a16cb4d63b4dee7e8e01e3a"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16cb2163b4dee7e8e01db8"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbc"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e34"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e37"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e3a"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:45:33.922Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:46:53.670Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cb4d63b4dee7e8e01e46"
+  },
+  "name": "Sport Bikes",
+  "parent": {
+    "$oid": "6a16cb4d63b4dee7e8e01e34"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16cb2163b4dee7e8e01db8"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbc"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e34"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:45:33.925Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:46:53.670Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cb4d63b4dee7e8e01e49"
+  },
+  "name": "Performance Bikes",
+  "parent": {
+    "$oid": "6a16cb4d63b4dee7e8e01e46"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16cb2163b4dee7e8e01db8"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbc"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e34"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e46"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:45:33.929Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:46:53.670Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cb4d63b4dee7e8e01e4c"
+  },
+  "name": "Yamaha R1",
+  "parent": {
+    "$oid": "6a16cb4d63b4dee7e8e01e49"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16cb2163b4dee7e8e01db8"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbc"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e34"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e46"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e49"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:45:33.934Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:46:53.670Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cb4d63b4dee7e8e01e4f"
+  },
+  "name": "Kawasaki Ninja ZX-10R",
+  "parent": {
+    "$oid": "6a16cb4d63b4dee7e8e01e49"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16cb2163b4dee7e8e01db8"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbc"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e34"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e46"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e49"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:45:33.938Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:46:53.670Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cb4d63b4dee7e8e01e52"
+  },
+  "name": "Ducati Panigale V4",
+  "parent": {
+    "$oid": "6a16cb4d63b4dee7e8e01e49"
+  },
+  "ancestors": [
+    {
+      "$oid": "6a16cb2163b4dee7e8e01db8"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01dbc"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e34"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e46"
+    },
+    {
+      "$oid": "6a16cb4d63b4dee7e8e01e49"
+    }
+  ],
+  "isActive": false,
+  "createdAt": {
+    "$date": "2026-05-27T10:45:33.943Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:46:53.670Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a16cc6463b4dee7e8e01e8d"
+  },
+  "name": "IT",
+  "parent": null,
+  "ancestors": [],
+  "isActive": true,
+  "createdAt": {
+    "$date": "2026-05-27T10:50:12.081Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-27T10:50:12.081Z"
+  }
+}]
