@@ -62,12 +62,22 @@ export class CategoryController {
 
   /**
    * POST /api/categories/bulk
-   * Creates a category with nested children in one shot.
+   * Creates a category (or array of categories) with nested children in one shot.
    */
   createCategoryInBulk = async (req: Request, res: Response, next: NextFunction) => {
     try {
-      const data = await service.createCategoryInBulk(req.body, req.body.parentId);
-      res.status(201).json(ResponseBuilder.created(data, MSG.CATEGORIES_CREATED));
+      const body = req.body;
+      if (Array.isArray(body)) {
+        const results = [];
+        for (const item of body) {
+          const created = await service.createCategoryInBulk(item, item.parentId);
+          results.push(created);
+        }
+        res.status(201).json(ResponseBuilder.created(results, MSG.CATEGORIES_CREATED));
+      } else {
+        const data = await service.createCategoryInBulk(body, body.parentId);
+        res.status(201).json(ResponseBuilder.created(data, MSG.CATEGORIES_CREATED));
+      }
     } catch (err) { next(err); }
   };
 

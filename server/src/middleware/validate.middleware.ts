@@ -5,9 +5,39 @@ import { ERR } from '../constants/messages';
 
 const isValidObjectId = (id: string) => Types.ObjectId.isValid(id);
 
+const validateBulkItem = (item: any, res: Response): boolean => {
+  if (!item.name || typeof item.name !== 'string' || !item.name.trim()) {
+    res.status(400).json(ResponseBuilder.badRequest(ERR.NAME_REQUIRED));
+    return false;
+  }
+  if (item.name.trim().length < 2) {
+    res.status(400).json(ResponseBuilder.badRequest(ERR.NAME_MIN_LENGTH));
+    return false;
+  }
+  if (item.name.trim().length > 100) {
+    res.status(400).json(ResponseBuilder.badRequest(ERR.NAME_MAX_LENGTH));
+    return false;
+  }
+  if (item.parentId !== undefined && !isValidObjectId(item.parentId)) {
+    res.status(400).json(ResponseBuilder.badRequest(ERR.INVALID_PARENT_ID));
+    return false;
+  }
+  return true;
+};
+
 /** Validates request body for create and bulk endpoints. */
 export const validateCreate = (req: Request, res: Response, next: NextFunction): void => {
-  const { name, parentId } = req.body;
+  const body = req.body;
+
+  if (Array.isArray(body)) {
+    for (const item of body) {
+      if (!validateBulkItem(item, res)) return;
+    }
+    next();
+    return;
+  }
+
+  const { name, parentId } = body;
 
   if (!name || typeof name !== 'string' || !name.trim()) {
     res.status(400).json(ResponseBuilder.badRequest(ERR.NAME_REQUIRED));

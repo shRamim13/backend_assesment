@@ -2,6 +2,7 @@ export const ERR = {
   CATEGORY_NOT_FOUND: 'Category not found',
   PARENT_NOT_FOUND: 'Parent category not found',
   PARENT_INACTIVE: 'Cannot add a child to an inactive parent category',
+  PARENT_INACTIVE_ACTIVATE: (child: string, parent: string) => `Cannot activate "${child}": parent "${parent}" is inactive. Activate the parent first.`,
   NAME_REQUIRED: 'Category name is required',
   NAME_MIN_LENGTH: 'Name must be at least 2 characters',
   NAME_MAX_LENGTH: 'Name cannot exceed 100 characters',

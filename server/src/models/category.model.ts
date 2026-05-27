@@ -33,9 +33,8 @@ const CategorySchema = new Schema<ICategory>(
   }
 );
 
-CategorySchema.index({ name: 1 }, { unique: true });
-CategorySchema.index({ ancestors: 1 });
-CategorySchema.index({ parent: 1 });
-CategorySchema.index({ isActive: 1 });
+CategorySchema.index({ name: 1, parent: 1 }, { unique: true });
+CategorySchema.index({ parent: 1, isActive: 1 });
+CategorySchema.index({ ancestors: 1, isActive: 1 });
 
 export const Category = mongoose.model<ICategory>('Category', CategorySchema);

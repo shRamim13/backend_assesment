@@ -1,5 +1,7 @@
 import express, { Application, Request, Response } from 'express';
 import mongoose from 'mongoose';
+import cors from 'cors';
+import path from 'path';
 import { config } from './config/env.config';
 import { connectDB, disconnectDB } from './config/db.config';
 import { connectRedis, disconnectRedis, redisClient } from './config/redis.config';
@@ -10,10 +12,14 @@ import { ERR } from './constants/messages';
 
 const app: Application = express();
 
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(requestLogger);
 app.use('/api/categories', categoryRoutes);
+
+const clientDist = path.join(__dirname, '../../client/dist');
+app.use(express.static(clientDist));
 
 app.get('/health', async (_req: Request, res: Response) => {
   const mongoStatus = mongoose.connection.readyState === 1 ? 'connected' : 'disconnected';
@@ -29,12 +35,8 @@ app.get('/health', async (_req: Request, res: Response) => {
   });
 });
 
-app.use((req: Request, res: Response) => {
-  res.status(404).json({
-    success: false,
-    message: ERR.ROUTE_NOT_FOUND(req.method, req.originalUrl),
-    timestamp: new Date().toISOString(),
-  });
+app.get('*', (_req: Request, res: Response) => {
+  res.sendFile(path.join(clientDist, 'index.html'));
 });
 
 app.use(errorMiddleware);

@@ -71,7 +71,8 @@ export class CategoryService {
     if (page && limit) {
       const data = await repo.findAllPaginated(page, limit);
       const total = await repo.countAll();
-      return { data, pagination: { page, limit, total, totalPages: Math.ceil(total / limit) } };
+      const enriched = await this.enrichWithAncestors(data);
+      return { data: enriched, pagination: { page, limit, total, totalPages: Math.ceil(total / limit) } };
     }
 
     const data = await repo.findAll();
@@ -132,6 +133,35 @@ export class CategoryService {
 
     await cache.set(cacheKey, result, config.cache.ttlSingle);
     return result;
+  }
+
+  /**
+   * Enriches raw ICategory documents with full ancestor chain info.
+   */
+  async enrichWithAncestors(categories: ICategory[]): Promise<CategoryWithAncestors[]> {
+    if (categories.length === 0) return [];
+
+    const ancestorIds = categories.reduce((ids: Types.ObjectId[], cat) => {
+      for (const a of cat.ancestors) {
+        if (!ids.find((id) => id.toString() === a.toString())) ids.push(a);
+      }
+      return ids;
+    }, []);
+    const ancestorDocs = ancestorIds.length > 0 ? await repo.findByIds(ancestorIds) : [];
+
+    return categories.map((cat) => {
+      const chain = buildAncestorChain(cat.ancestors, ancestorDocs);
+      return {
+        _id: cat._id.toString(),
+        name: cat.name,
+        isActive: cat.isActive,
+        parent: cat.parent?.toString() ?? null,
+        parentCategory: chain[chain.length - 1] ?? null,
+        ancestorChain: chain,
+        createdAt: cat.createdAt,
+        updatedAt: cat.updatedAt,
+      };
+    });
   }
 
   /**
@@ -258,12 +288,19 @@ export class CategoryService {
   }
 
   /**
-   * Activates a category and all its descendants (cascade).
-   * Returns the count of activated categories.
+   * Activates a category and all its descendants (cascade down).
+   * Returns an error if the parent category is inactive.
    */
   async activateCategory(id: string): Promise<DeactivationResult> {
     const category = await repo.findById(id);
     if (!category) throw createError(ERR.CATEGORY_NOT_FOUND, 404);
+
+    if (category.parent) {
+      const parent = await repo.findById(category.parent.toString());
+      if (parent && !parent.isActive) {
+        throw createError(ERR.PARENT_INACTIVE_ACTIVATE(category.name, parent.name), 400);
+      }
+    }
 
     const descendants = await repo.findDescendants(id);
     const descendantIds = collectDescendantIdsDFS(descendants, id);
