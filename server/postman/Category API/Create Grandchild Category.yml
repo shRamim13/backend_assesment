@@ -1,0 +1,21 @@
+info:
+  name: Create Grandchild Category
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{base_url}}/api/categories"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: '{"name": "Wearable Accessories", "parentId": "{{childId}}"}'
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

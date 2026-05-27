@@ -1,0 +1,241 @@
+{
+  "info": {
+    "name": "Category API",
+    "description": "CRUD for hierarchical categories with unlimited nesting, Redis caching, cascade deactivation, pagination, and bulk nested inserts.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/health",
+          "host": ["{{base_url}}"],
+          "path": ["health"]
+        }
+      }
+    },
+    {
+      "name": "List All Categories (Tree)",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/api/categories",
+          "host": ["{{base_url}}"],
+          "path": ["api", "categories"]
+        }
+      }
+    },
+    {
+      "name": "List Categories (Paginated)",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/api/categories?page=1&limit=2",
+          "host": ["{{base_url}}"],
+          "path": ["api", "categories"],
+          "query": [
+            { "key": "page", "value": "1" },
+            { "key": "limit", "value": "2" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Search Categories by Name",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/api/categories/search?name=watch",
+          "host": ["{{base_url}}"],
+          "path": ["api", "categories", "search"],
+          "query": [
+            { "key": "name", "value": "watch" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Search Categories (Paginated)",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/api/categories/search?name=watch&page=1&limit=5",
+          "host": ["{{base_url}}"],
+          "path": ["api", "categories", "search"],
+          "query": [
+            { "key": "name", "value": "watch" },
+            { "key": "page", "value": "1" },
+            { "key": "limit", "value": "5" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get Category By ID",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/api/categories/{{categoryId}}",
+          "host": ["{{base_url}}"],
+          "path": ["api", "categories", "{{categoryId}}"]
+        }
+      }
+    },
+    {
+      "name": "Create Root Category",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "var jsonData = pm.response.json();",
+              "if (jsonData.data && jsonData.data._id) {",
+              "  pm.collectionVariables.set('categoryId', jsonData.data._id);",
+              "}"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "url": {
+          "raw": "{{base_url}}/api/categories",
+          "host": ["{{base_url}}"],
+          "path": ["api", "categories"]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\": \"Electronics\"}"
+        }
+      }
+    },
+    {
+      "name": "Create Child Category",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "var jsonData = pm.response.json();",
+              "if (jsonData.data && jsonData.data._id) {",
+              "  pm.collectionVariables.set('childId', jsonData.data._id);",
+              "}"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "url": {
+          "raw": "{{base_url}}/api/categories",
+          "host": ["{{base_url}}"],
+          "path": ["api", "categories"]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\": \"Accessories\", \"parentId\": \"{{categoryId}}\"}"
+        }
+      }
+    },
+    {
+      "name": "Bulk Create Category + Children (one shot)",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "url": {
+          "raw": "{{base_url}}/api/categories/bulk",
+          "host": ["{{base_url}}"],
+          "path": ["api", "categories", "bulk"]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\": \"Video Games\", \"parentId\": \"{{categoryId}}\", \"children\": [{\"name\": \"PS5\"}, {\"name\": \"Xbox\"}]}"
+        }
+      }
+    },
+    {
+      "name": "Upsert Category (by Name)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "url": {
+          "raw": "{{base_url}}/api/categories/upsert",
+          "host": ["{{base_url}}"],
+          "path": ["api", "categories", "upsert"]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\": \"Gadgets\"}"
+        }
+      }
+    },
+    {
+      "name": "Update Category Name",
+      "request": {
+        "method": "PUT",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "url": {
+          "raw": "{{base_url}}/api/categories/{{categoryId}}",
+          "host": ["{{base_url}}"],
+          "path": ["api", "categories", "{{categoryId}}"]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\": \"Updated Name\"}"
+        }
+      }
+    },
+    {
+      "name": "Delete Category (Cascade — deletes children too)",
+      "request": {
+        "method": "DELETE",
+        "url": {
+          "raw": "{{base_url}}/api/categories/{{categoryId}}",
+          "host": ["{{base_url}}"],
+          "path": ["api", "categories", "{{categoryId}}"]
+        }
+      }
+    },
+    {
+      "name": "Deactivate Category (Cascade)",
+      "request": {
+        "method": "PATCH",
+        "url": {
+          "raw": "{{base_url}}/api/categories/{{categoryId}}/deactivate",
+          "host": ["{{base_url}}"],
+          "path": ["api", "categories", "{{categoryId}}", "deactivate"]
+        }
+      }
+    },
+    {
+      "name": "Activate Category (Cascade)",
+      "request": {
+        "method": "PATCH",
+        "url": {
+          "raw": "{{base_url}}/api/categories/{{categoryId}}/activate",
+          "host": ["{{base_url}}"],
+          "path": ["api", "categories", "{{categoryId}}", "activate"]
+        }
+      }
+    }
+  ],
+  "variable": [
+    { "key": "base_url", "value": "http://localhost:3000" }
+  ]
+}
