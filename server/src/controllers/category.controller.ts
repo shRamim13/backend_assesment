@@ -119,7 +119,7 @@ export class CategoryController {
 
   /**
    * PATCH /api/categories/:id/activate
-   * Activates a category and all its descendants (cascade).
+   * Activates a category.
    */
   activateCategory = async (req: Request, res: Response, next: NextFunction) => {
     try {

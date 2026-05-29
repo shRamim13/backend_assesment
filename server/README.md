@@ -22,7 +22,7 @@ REST API for managing hierarchical product categories with unlimited nesting dep
 - **Flat list** — paginated collection of all categories
 - **Search** — case-insensitive regex search with parent + ancestor chain
 - **Cascade delete** — delete a category and all its descendants at any level
-- **Cascade deactivate/activate** — toggle active status for entire subtree
+- **Cascade deactivate** — deactivates a subtree; **activate** un-hides a single category
 - **Bulk nested insert** — create a category tree in one POST
 - **Upsert** — create or return existing category by name (idempotent)
 - **Redis caching** — tree and single-category responses cached; auto-invalidation on writes
@@ -106,8 +106,8 @@ Paginated responses include a `pagination` field:
 | `POST` | `/api/categories/bulk` | Create category + nested children |
 | `PUT` | `/api/categories/:id` | Update name by ID |
 | `DELETE` | `/api/categories/:id` | Delete category + all children |
-| `PATCH` | `/:id/deactivate` | Deactivate + all children (cascade) |
-| `PATCH` | `/:id/activate` | Activate + all children (cascade) |
+| `PATCH` | `/api/categories/:id/deactivate` | Deactivate + all children (cascade) |
+| `PATCH` | `/api/categories/:id/activate` | Activate single category |
 | `GET` | `/health` | MongoDB + Redis status |
 
 ### Flat list
@@ -211,14 +211,15 @@ DELETE /api/categories/:id
 
 Deletes the category and **all** its descendants at any depth.
 
-### Deactivate / Activate (cascade)
+### Deactivate (Cascade) / Activate
 
 ```bash
 PATCH /api/categories/:id/deactivate
 PATCH /api/categories/:id/activate
 ```
 
-Toggles `isActive` on the category and **all** descendants.
+**Deactivate** toggles `isActive` to false on the category and **all** descendants.
+**Activate** toggles `isActive` to true on a **single** category (ensuring its parent is active).
 
 ### Health check
 
@@ -321,11 +322,13 @@ All MongoDB queries isolated in repository layer. Service layer contains busines
 
 ### Cascade Operations
 
-Deactivate, activate, and delete all follow the same pattern:
+Deactivate and delete follow a cascading pattern:
 1. Find category
 2. Find all descendants via `ancestors` index
 3. Collect IDs via iterative DFS
 4. Single `updateMany` / `deleteMany` with all IDs
+
+*Note: Activate operates only on the single category and verifies parent status, it does not cascade.*
 
 ## Postman Collection
 
