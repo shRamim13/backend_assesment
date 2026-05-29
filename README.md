@@ -397,10 +397,10 @@ Name uniqueness is enforced at two levels: globally (unique index) and per-paren
 └── README.md
 
 ---
-
 ## Contact
 
-**Developer:** Sabbir Hossen Ramim  
-**Email:** shramim13@gmail.com  
-**Phone:** 01845862636
-```
+| Field | Details |
+|------|---------|
+| Name | Sabbir Hossen Ramim |
+| Email | shramim13@gmail.com |
+| Contact Number | 01845862636 |
