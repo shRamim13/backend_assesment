@@ -22,7 +22,12 @@ export const MSG = {
   CATEGORY_UPSERTED: 'Category upserted successfully',
   CATEGORY_UPDATED: 'Category updated successfully',
   CATEGORY_DELETED: 'Category deleted successfully',
-  CATEGORY_DEACTIVATED: (name: string, count: number) => `"${name}" and ${count - 1} children deactivated`,
-  CATEGORY_ACTIVATED: (name: string, count: number) => `"${name}" and ${count - 1} children activated`,
+  CATEGORY_DEACTIVATED: (name: string, count: number) => {
+    const childCount = count - 1;
+    return childCount > 0 
+      ? `"${name}" and ${childCount} children deactivated`
+      : `"${name}" deactivated`;
+  },
+  CATEGORY_ACTIVATED: (name: string) => `"${name}" activated successfully`,
   SEARCH_RESULTS: 'Search results fetched successfully',
 } as const;

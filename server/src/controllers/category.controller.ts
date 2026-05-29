@@ -126,7 +126,7 @@ export class CategoryController {
       const result = await service.activateCategory(req.params.id);
       res.status(200).json(ResponseBuilder.success(
         result,
-        MSG.CATEGORY_ACTIVATED(result.categoryName, result.affectedCount)
+        MSG.CATEGORY_ACTIVATED(result.categoryName)
       ));
     } catch (err) { next(err); }
   };

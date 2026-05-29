@@ -103,7 +103,10 @@ export class CategoryRepository {
   }
 
   async deactivateMany(ids: string[]): Promise<number> {
-    const result = await Category.updateMany({ _id: { $in: ids } }, { isActive: false });
+    const result = await Category.updateMany(
+      { _id: { $in: ids }, isActive: true }, 
+      { isActive: false }
+    );
     return result.modifiedCount;
   }
 
