@@ -46,7 +46,8 @@ export const api = {
   update: (id: string, name: string) =>
     request<Category>(`${BASE}/${id}`, { method: 'PUT', body: JSON.stringify({ name }) }),
 
-  delete: (id: string) => request<null>(`${BASE}/${id}`, { method: 'DELETE' }),
+  delete: (id: string) =>
+    fetch(`${BASE}/${id}`, { method: 'DELETE', headers: { 'Content-Type': 'application/json' } }).then((r) => r.json()) as Promise<ApiResponse<null>>,
 
   deactivate: (id: string) => request<DeactivationResult>(`${BASE}/${id}/deactivate`, { method: 'PATCH' }),
 

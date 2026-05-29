@@ -98,10 +98,10 @@ export default function CategoryTreeView() {
     }
   };
 
-  const handleDelete = async (id: string, name: string) => {
+  const handleDelete = async (id: string, _name: string) => {
     try {
-      await api.delete(id);
-      message.success(`"${name}" deleted`);
+      const res = await api.delete(id);
+      message.success(res.message);
       fetchTree(selectedId);
     } catch (e: any) {
       message.error(e.message);
