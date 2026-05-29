@@ -1,7 +1,7 @@
 import { Types } from 'mongoose';
 import { CategoryRepository } from '../repositories/category.repository';
 import { CacheService } from './cache.service';
-import { buildTreeDFS, collectDescendantIdsDFS } from '../utils/dfs.util';
+import { buildTreeDFS } from '../utils/dfs.util';
 import { createError, buildAncestorChain } from '../utils/helpers';
 import { config } from '../config/env.config';
 import { ERR } from '../constants/messages';
@@ -141,12 +141,14 @@ export class CategoryService {
   async enrichWithAncestors(categories: ICategory[]): Promise<CategoryWithAncestors[]> {
     if (categories.length === 0) return [];
 
-    const ancestorIds = categories.reduce((ids: Types.ObjectId[], cat) => {
+    const ancestorIdsSet = new Set<string>();
+    for (const cat of categories) {
       for (const a of cat.ancestors) {
-        if (!ids.find((id) => id.toString() === a.toString())) ids.push(a);
+        ancestorIdsSet.add(a.toString());
       }
-      return ids;
-    }, []);
+    }
+    const ancestorIds = Array.from(ancestorIdsSet).map((id) => new Types.ObjectId(id));
+    
     const ancestorDocs = ancestorIds.length > 0 ? await repo.findByIds(ancestorIds) : [];
 
     return categories.map((cat) => {
@@ -176,12 +178,13 @@ export class CategoryService {
         return { data: [], pagination: { page, limit, total, totalPages: Math.ceil(total / limit) } };
       }
 
-      const ancestorIds = results.reduce((ids: Types.ObjectId[], cat) => {
+      const paginatedSet = new Set<string>();
+      for (const cat of results) {
         for (const a of cat.ancestors) {
-          if (!ids.find((id) => id.toString() === a.toString())) ids.push(a);
+          paginatedSet.add(a.toString());
         }
-        return ids;
-      }, []);
+      }
+      const ancestorIds = Array.from(paginatedSet).map((id) => new Types.ObjectId(id));
       const ancestorDocs = await repo.findByIds(ancestorIds);
       const data = results.map((cat) => {
         const chain = buildAncestorChain(cat.ancestors, ancestorDocs);
@@ -207,12 +210,13 @@ export class CategoryService {
     const results = await repo.searchByName(term);
     if (results.length === 0) return { data: [] };
 
-    const ancestorIds = results.reduce((ids: Types.ObjectId[], cat) => {
+    const nonPaginatedSet = new Set<string>();
+    for (const cat of results) {
       for (const a of cat.ancestors) {
-        if (!ids.find((id) => id.toString() === a.toString())) ids.push(a);
+        nonPaginatedSet.add(a.toString());
       }
-      return ids;
-    }, []);
+    }
+    const ancestorIds = Array.from(nonPaginatedSet).map((id) => new Types.ObjectId(id));
 
     const ancestorDocs = await repo.findByIds(ancestorIds);
     const data: CategoryWithAncestors[] = results.map((cat) => {
@@ -254,7 +258,7 @@ export class CategoryService {
     if (!category) throw createError(ERR.CATEGORY_NOT_FOUND, 404);
 
     const descendants = await repo.findDescendants(id);
-    const descendantIds = collectDescendantIdsDFS(descendants, id);
+    const descendantIds = descendants.map((d) => d._id.toString());
     await repo.deleteMany([id, ...descendantIds]);
     await cache.invalidateAll();
   }
@@ -280,7 +284,7 @@ export class CategoryService {
     if (!category) throw createError(ERR.CATEGORY_NOT_FOUND, 404);
 
     const descendants = await repo.findDescendants(id);
-    const descendantIds = collectDescendantIdsDFS(descendants, id);
+    const descendantIds = descendants.map((d) => d._id.toString());
     const count = await repo.deactivateMany([id, ...descendantIds]);
 
     await cache.invalidateAll();
