@@ -270,7 +270,7 @@ src/
 │   └── logger.middleware.ts   # Colored request logging
 ├── utils/
 │   ├── helpers.ts             # createError(), buildAncestorChain()
-│   ├── dfs.util.ts            # buildTreeDFS(), collectDescendantIdsDFS()
+│   ├── dfs.util.ts            # buildTreeDFS() (Adjacency Map)
 │   └── response.util.ts       # ResponseBuilder (success, paginated, error)
 └── constants/
     └── messages.ts            # All string constants (ERR, MSG)
@@ -304,10 +304,9 @@ Each document stores an `ancestors` array containing IDs of all parent categorie
 }
 ```
 
-### DFS for Tree Building and Cascade
+### Optimized Tree Building
 
-- **Recursive**: `buildTreeDFS()` builds nested tree response from flat documents in application memory
-- **Iterative (stack-based)**: `collectDescendantIdsDFS()` prevents call stack overflow on very deep trees during cascade operations
+- **O(N) Adjacency Map**: `buildTreeDFS()` builds nested tree responses from flat documents in application memory instantly by hashing parent relationships rather than running nested loops.
 
 ### Repository Pattern
 
@@ -324,8 +323,8 @@ All MongoDB queries isolated in repository layer. Service layer contains busines
 
 Deactivate and delete follow a cascading pattern:
 1. Find category
-2. Find all descendants via `ancestors` index
-3. Collect IDs via iterative DFS
+2. Find all descendants rapidly via `ancestors` index in MongoDB
+3. Extract IDs directly from the returned cursor
 4. Single `updateMany` / `deleteMany` with all IDs
 
 *Note: Activate operates only on the single category and verifies parent status, it does not cascade.*
