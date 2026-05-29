@@ -395,4 +395,12 @@ Name uniqueness is enforced at two levels: globally (unique index) and per-paren
 │
 ├── postman/                 Postman collection + seed data
 └── README.md
+
+---
+
+## Contact
+
+**Developer:** Sabbir Hossen Ramim  
+**Email:** shramim13@gmail.com  
+**Phone:** 01845862636
 ```
