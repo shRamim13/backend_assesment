@@ -33,7 +33,8 @@ const CategorySchema = new Schema<ICategory>(
   }
 );
 
-CategorySchema.index({ name: 1, parent: 1 }, { unique: true });
+// text index for scalable search
+CategorySchema.index({ name: 'text' });
 CategorySchema.index({ parent: 1, isActive: 1 });
 CategorySchema.index({ ancestors: 1, isActive: 1 });
 

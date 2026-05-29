@@ -5,7 +5,7 @@ const cache = new CacheService();
 
 export const cacheMiddleware = (ttlSeconds: number) => {
   return (req: Request, res: Response, next: NextFunction): void => {
-    const key = req.params.id ? cache.keys.one(req.params.id) : cache.keys.url(req.originalUrl);
+    const key = req.params.id ? cache.keys.http.one(req.params.id) : cache.keys.http.url(req.originalUrl);
 
     cache.get<any>(key)
       .then((cached) => {

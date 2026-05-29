@@ -96,12 +96,12 @@ export class CategoryService {
       return matched ? [matched] : [];
     }
 
-    const cached = await cache.get<CategoryTreeNode[]>(cache.keys.all);
+    const cached = await cache.get<CategoryTreeNode[]>(cache.keys.domain.all);
     if (cached) return cached;
 
     const all = await repo.findAll();
     const tree = buildTreeDFS(all);
-    await cache.set(cache.keys.all, tree);
+    await cache.set(cache.keys.domain.all, tree);
     return tree;
   }
 
@@ -110,7 +110,7 @@ export class CategoryService {
    * Results are cached in Redis.
    */
   async getCategoryById(id: string): Promise<CategoryWithAncestors> {
-    const cacheKey = cache.keys.one(id);
+    const cacheKey = cache.keys.domain.one(id);
     const cached = await cache.get<CategoryWithAncestors>(cacheKey);
     if (cached) return cached;
 
@@ -203,7 +203,7 @@ export class CategoryService {
       return { data, pagination: { page, limit, total, totalPages: Math.ceil(total / limit) } };
     }
 
-    const cacheKey = cache.keys.search(term);
+    const cacheKey = cache.keys.domain.search(term);
     const cached = await cache.get<CategoryWithAncestors[]>(cacheKey);
     if (cached) return { data: cached };
 

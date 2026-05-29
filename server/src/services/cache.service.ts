@@ -24,9 +24,16 @@ export class CacheService {
 
   async invalidateAll(): Promise<void> {
     try {
-      const keys = await redisClient.keys(`${CACHE_PREFIX}*`);
-      if (keys.length > 0) {
-        await redisClient.del(keys);
+      let keysToDelete: string[] = [];
+      for await (const key of redisClient.scanIterator({ MATCH: `${CACHE_PREFIX}*`, COUNT: 100 })) {
+        keysToDelete.push(key);
+        if (keysToDelete.length >= 100) {
+          await redisClient.del(keysToDelete);
+          keysToDelete = [];
+        }
+      }
+      if (keysToDelete.length > 0) {
+        await redisClient.del(keysToDelete);
       }
     } catch (err) {
       console.error('Cache invalidate error (non-fatal):', err);
@@ -34,9 +41,14 @@ export class CacheService {
   }
 
   keys = {
-    all: `${CACHE_PREFIX}all`,
-    one: (id: string) => `${CACHE_PREFIX}${id}`,
-    search: (term: string) => `${CACHE_PREFIX}search:${term.toLowerCase()}`,
-    url: (url: string) => `${CACHE_PREFIX}${url}`,
+    domain: {
+      all: `${CACHE_PREFIX}domain:all`,
+      one: (id: string) => `${CACHE_PREFIX}domain:${id}`,
+      search: (term: string) => `${CACHE_PREFIX}domain:search:${term.toLowerCase()}`,
+    },
+    http: {
+      one: (id: string) => `${CACHE_PREFIX}http:id:${id}`,
+      url: (url: string) => `${CACHE_PREFIX}http:url:${url}`,
+    }
   };
 }
