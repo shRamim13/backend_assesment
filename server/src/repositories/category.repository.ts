@@ -66,27 +66,21 @@ export class CategoryRepository {
   }
 
   async searchByName(term: string): Promise<ICategory[]> {
-    return Category.find(
-      { $text: { $search: term } },
-      { score: { $meta: 'textScore' } }
-    )
-      .sort({ score: { $meta: 'textScore' } })
+    return Category.find({ name: { $regex: term, $options: 'i' } })
+      .sort({ name: 1 })
       .lean() as Promise<ICategory[]>;
   }
 
   async searchByNamePaginated(term: string, page: number, limit: number): Promise<ICategory[]> {
-    return Category.find(
-      { $text: { $search: term } },
-      { score: { $meta: 'textScore' } }
-    )
-      .sort({ score: { $meta: 'textScore' } })
+    return Category.find({ name: { $regex: term, $options: 'i' } })
+      .sort({ name: 1 })
       .skip((page - 1) * limit)
       .limit(limit)
       .lean() as Promise<ICategory[]>;
   }
 
   async countSearchResults(term: string): Promise<number> {
-    return Category.countDocuments({ $text: { $search: term } });
+    return Category.countDocuments({ name: { $regex: term, $options: 'i' } });
   }
 
   async updateName(id: string, name: string): Promise<ICategory | null> {

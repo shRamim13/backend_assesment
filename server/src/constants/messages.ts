@@ -21,7 +21,12 @@ export const MSG = {
   CATEGORIES_CREATED: 'Categories created successfully',
   CATEGORY_UPSERTED: 'Category upserted successfully',
   CATEGORY_UPDATED: 'Category updated successfully',
-  CATEGORY_DELETED: 'Category deleted successfully',
+  CATEGORY_DELETED: (name: string, count: number) => {
+    const childCount = count - 1;
+    return childCount > 0
+      ? `"${name}" and ${childCount} children deleted`
+      : `"${name}" deleted`;
+  },
   CATEGORY_DEACTIVATED: (name: string, count: number) => {
     const childCount = count - 1;
     return childCount > 0 

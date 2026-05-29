@@ -253,14 +253,16 @@ export class CategoryService {
    * Deletes a category and all its descendants (cascade).
    * Uses iterative DFS to collect all descendant IDs.
    */
-  async deleteCategory(id: string): Promise<void> {
+  async deleteCategory(id: string): Promise<{ affectedCount: number; categoryName: string }> {
     const category = await repo.findById(id);
     if (!category) throw createError(ERR.CATEGORY_NOT_FOUND, 404);
 
     const descendants = await repo.findDescendants(id);
     const descendantIds = descendants.map((d) => d._id.toString());
-    await repo.deleteMany([id, ...descendantIds]);
+    const allIds = [id, ...descendantIds];
+    await repo.deleteMany(allIds);
     await cache.invalidateAll();
+    return { affectedCount: allIds.length, categoryName: category.name };
   }
 
   /**

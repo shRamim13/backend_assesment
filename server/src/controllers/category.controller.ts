@@ -98,8 +98,8 @@ export class CategoryController {
    */
   deleteCategory = async (req: Request, res: Response, next: NextFunction) => {
     try {
-      await service.deleteCategory(req.params.id);
-      res.status(200).json(ResponseBuilder.success(null, MSG.CATEGORY_DELETED));
+      const result = await service.deleteCategory(req.params.id);
+      res.status(200).json(ResponseBuilder.success(null, MSG.CATEGORY_DELETED(result.categoryName, result.affectedCount)));
     } catch (err) { next(err); }
   };
 
