@@ -1,8 +1,9 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 import { Spin, Tree, Tag, Button, Space, message, Tooltip, Typography, Modal, Descriptions, Switch, Popconfirm, Select, Input } from 'antd';
 import { EditOutlined, DeleteOutlined } from '@ant-design/icons';
 import type { CategoryTreeNode, CategoryWithAncestors } from '../types';
 import { api } from '../api/categoryApi';
+import { debounce } from '../utils/debounce';
 
 export default function CategoryTreeView() {
   const [tree, setTree] = useState<CategoryTreeNode[]>([]);
@@ -31,16 +32,30 @@ export default function CategoryTreeView() {
 
   useEffect(() => { fetchTree(); }, []);
 
-  const handleSearch = async (query: string) => {
-    if (!query.trim()) { setSearchResults([]); return; }
-    try {
-      const res = await api.getFlat(1, 20, query.trim());
-      const items = (res.data || []).map((c: any) => ({
-        value: c._id,
-        label: `${c.name}${c.ancestorChain?.length ? ` (${c.ancestorChain.map((a: any) => a.name).join(' > ')})` : ''}`,
-      }));
-      setSearchResults(items);
-    } catch { setSearchResults([]); }
+  // Create a memoized debounced search function so it does not reset on renders
+  const debouncedApiSearch = useMemo(
+    () =>
+      debounce(async (query: string) => {
+        try {
+          const res = await api.getFlat(1, 20, query);
+          const items = (res.data || []).map((c: any) => ({
+            value: c._id,
+            label: `${c.name}${c.ancestorChain?.length ? ` (${c.ancestorChain.map((a: any) => a.name).join(' > ')})` : ''}`,
+          }));
+          setSearchResults(items);
+        } catch {
+          setSearchResults([]);
+        }
+      }, 400),
+    []
+  );
+
+  const handleSearch = (query: string) => {
+    if (!query.trim()) {
+      setSearchResults([]);
+      return;
+    }
+    debouncedApiSearch(query.trim());
   };
 
   const handleSelect = (id: string) => {

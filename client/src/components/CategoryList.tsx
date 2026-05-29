@@ -32,11 +32,17 @@ export default function CategoryList() {
     setLoading(false);
   };
 
-  useEffect(() => { fetchData(page, search); }, [page]);
+  useEffect(() => { 
+    // Trigger on page changes independently of search timeout, but only if not initial load
+    // Actually, it's safer to just fetch when `page` changes
+    fetchData(page, search); 
+  }, [page]);
 
   useEffect(() => {
-    if (!search) return;
-    const timer = setTimeout(() => fetchData(1, search), 300);
+    const timer = setTimeout(() => {
+      setPage(1);
+      fetchData(1, search);
+    }, 400);
     return () => clearTimeout(timer);
   }, [search]);
 

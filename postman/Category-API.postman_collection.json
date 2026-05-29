@@ -21,7 +21,7 @@
       "request": {
         "method": "GET",
         "url": {
-          "raw": "{{base_url}}/api/categories",
+          "raw": "{{base_url}}/api/categories/tree",
           "host": ["{{base_url}}"],
           "path": ["api", "categories"]
         }
@@ -47,7 +47,7 @@
       "request": {
         "method": "GET",
         "url": {
-          "raw": "{{base_url}}/api/categories/search?name=watch",
+          "raw": "{{base_url}}/api/categories?name=watch",
           "host": ["{{base_url}}"],
           "path": ["api", "categories", "search"],
           "query": [
@@ -61,7 +61,7 @@
       "request": {
         "method": "GET",
         "url": {
-          "raw": "{{base_url}}/api/categories/search?name=watch&page=1&limit=5",
+          "raw": "{{base_url}}/api/categories?name=watch&page=1&limit=5",
           "host": ["{{base_url}}"],
           "path": ["api", "categories", "search"],
           "query": [
