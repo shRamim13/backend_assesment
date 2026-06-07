@@ -350,7 +350,7 @@ Redis failures are caught gracefully — the app falls back to MongoDB without c
 ```json
 {
   "_id": "ObjectId",
-  "name": "string (unique globally and per parent)",
+  "name": "string (globally unique)",
   "parent": "ObjectId | null",
   "ancestors": "ObjectId[]",
   "isActive": "boolean",
@@ -359,7 +359,7 @@ Redis failures are caught gracefully — the app falls back to MongoDB without c
 }
 ```
 
-Name uniqueness is enforced at two levels: globally (unique index) and per-parent (compound index).
+Name uniqueness is enforced globally via a unique index on `name`. Two supporting (non-unique) compound indexes — `{ parent, isActive }` and `{ ancestors, isActive }` — speed up child and subtree lookups.
 
 ---
 
