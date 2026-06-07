@@ -75,16 +75,6 @@ export const validateUpdate = (req: Request, res: Response, next: NextFunction):
   next();
 };
 
-/** Validates that a search query parameter is present. */
-export const validateSearch = (req: Request, res: Response, next: NextFunction): void => {
-  const { name } = req.query;
-  if (!name || typeof name !== 'string' || !name.trim()) {
-    res.status(400).json(ResponseBuilder.badRequest(ERR.SEARCH_QUERY_REQUIRED));
-    return;
-  }
-  next();
-};
-
 /** Validates that a route parameter is a valid MongoDB ObjectId. */
 export const validateObjectId = (req: Request, res: Response, next: NextFunction): void => {
   if (!isValidObjectId(req.params.id)) {

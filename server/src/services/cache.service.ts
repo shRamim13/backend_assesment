@@ -43,12 +43,8 @@ export class CacheService {
   keys = {
     domain: {
       all: `${CACHE_PREFIX}domain:all`,
+      subtree: (id: string) => `${CACHE_PREFIX}domain:tree:${id}`,
       one: (id: string) => `${CACHE_PREFIX}domain:${id}`,
-      search: (term: string) => `${CACHE_PREFIX}domain:search:${term.toLowerCase()}`,
     },
-    http: {
-      one: (id: string) => `${CACHE_PREFIX}http:id:${id}`,
-      url: (url: string) => `${CACHE_PREFIX}http:url:${url}`,
-    }
   };
 }

@@ -8,7 +8,7 @@ import { connectRedis, disconnectRedis, redisClient } from './config/redis.confi
 import categoryRoutes from './routes/category.routes';
 import { requestLogger } from './middleware/logger.middleware';
 import { errorMiddleware } from './middleware/error.middleware';
-import { ERR } from './constants/messages';
+import { ResponseBuilder } from './utils/response.util';
 
 const app: Application = express();
 
@@ -35,7 +35,13 @@ app.get('/health', async (_req: Request, res: Response) => {
   });
 });
 
-app.get('*', (_req: Request, res: Response) => {
+app.get('*', (req: Request, res: Response) => {
+  // API and health paths that reached here are genuinely unmatched —
+  // return JSON 404 instead of serving the SPA shell.
+  if (req.path.startsWith('/api') || req.path === '/health') {
+    res.status(404).json(ResponseBuilder.error(`Route ${req.method} ${req.originalUrl} not found`, 404));
+    return;
+  }
   res.sendFile(path.join(clientDist, 'index.html'));
 });
 
@@ -44,7 +50,14 @@ app.use(errorMiddleware);
 const start = async (): Promise<void> => {
   try {
     await connectDB();
-    await connectRedis();
+
+    // Redis is a cache, not a hard dependency. If it's down at boot, log and
+    // continue — CacheService degrades gracefully and the app serves from Mongo.
+    try {
+      await connectRedis();
+    } catch (err) {
+      console.warn(`Redis unavailable at startup, continuing without cache: ${(err as Error).message}`);
+    }
 
     app.listen(config.port, () => {
       console.log(`Server running at http://localhost:${config.port}`);

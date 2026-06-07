@@ -15,7 +15,7 @@ export class CategoryController {
   getCategories = async (req: Request, res: Response, next: NextFunction) => {
     try {
       const name = req.query.name as string | undefined;
-      const page = req.query.page ? parseInt(req.query.page as string, 10) : undefined;
+      const page = req.query.page ? Math.max(1, parseInt(req.query.page as string, 10) || 1) : undefined;
       const limit = req.query.limit? Math.min(Number(req.query.limit) || 10, 100): undefined;
       const { data, pagination } = await service.getCategories(name, page, limit);
       if (pagination) {

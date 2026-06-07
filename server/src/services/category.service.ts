@@ -86,6 +86,10 @@ export class CategoryService {
    */
   async getCategoryTree(id?: string): Promise<CategoryTreeNode[]> {
     if (id) {
+      const cacheKey = cache.keys.domain.subtree(id);
+      const cachedSubtree = await cache.get<CategoryTreeNode[]>(cacheKey);
+      if (cachedSubtree) return cachedSubtree;
+
       const category = await repo.findById(id);
       if (!category) throw createError(ERR.CATEGORY_NOT_FOUND, 404);
       const descendants = await repo.findDescendants(id);
@@ -93,7 +97,9 @@ export class CategoryService {
       const parentId = category.parent?.toString() ?? null;
       const tree = buildTreeDFS(all, parentId);
       const matched = tree.find((n) => n._id === category._id.toString());
-      return matched ? [matched] : [];
+      const result = matched ? [matched] : [];
+      await cache.set(cacheKey, result);
+      return result;
     }
 
     const cached = await cache.get<CategoryTreeNode[]>(cache.keys.domain.all);
@@ -118,25 +124,34 @@ export class CategoryService {
     if (!category) throw createError(ERR.CATEGORY_NOT_FOUND, 404);
 
     const ancestorDocs = await repo.findByIds(category.ancestors);
-    const orderedAncestors = buildAncestorChain(category.ancestors, ancestorDocs);
-
-    const result: CategoryWithAncestors = {
-      _id: category._id.toString(),
-      name: category.name,
-      isActive: category.isActive,
-      parent: category.parent?.toString() ?? null,
-      parentCategory: orderedAncestors[orderedAncestors.length - 1] ?? null,
-      ancestorChain: orderedAncestors,
-      createdAt: category.createdAt,
-      updatedAt: category.updatedAt,
-    };
+    const result = this.toWithAncestors(category, ancestorDocs);
 
     await cache.set(cacheKey, result, config.cache.ttlSingle);
     return result;
   }
 
   /**
-   * Enriches raw ICategory documents with full ancestor chain info.
+   * Maps a raw category document to its API shape, resolving the ordered
+   * ancestor chain from the supplied ancestor documents. Single source of
+   * truth for the ICategory -> CategoryWithAncestors transformation.
+   */
+  private toWithAncestors(cat: ICategory, ancestorDocs: ICategory[]): CategoryWithAncestors {
+    const chain = buildAncestorChain(cat.ancestors, ancestorDocs);
+    return {
+      _id: cat._id.toString(),
+      name: cat.name,
+      isActive: cat.isActive,
+      parent: cat.parent?.toString() ?? null,
+      parentCategory: chain[chain.length - 1] ?? null,
+      ancestorChain: chain,
+      createdAt: cat.createdAt,
+      updatedAt: cat.updatedAt,
+    };
+  }
+
+  /**
+   * Enriches raw ICategory documents with their full ancestor chain.
+   * Batches the ancestor lookup into a single query for all categories.
    */
   async enrichWithAncestors(categories: ICategory[]): Promise<CategoryWithAncestors[]> {
     if (categories.length === 0) return [];
@@ -148,93 +163,20 @@ export class CategoryService {
       }
     }
     const ancestorIds = Array.from(ancestorIdsSet).map((id) => new Types.ObjectId(id));
-    
     const ancestorDocs = ancestorIds.length > 0 ? await repo.findByIds(ancestorIds) : [];
 
-    return categories.map((cat) => {
-      const chain = buildAncestorChain(cat.ancestors, ancestorDocs);
-      return {
-        _id: cat._id.toString(),
-        name: cat.name,
-        isActive: cat.isActive,
-        parent: cat.parent?.toString() ?? null,
-        parentCategory: chain[chain.length - 1] ?? null,
-        ancestorChain: chain,
-        createdAt: cat.createdAt,
-        updatedAt: cat.updatedAt,
-      };
-    });
+    return categories.map((cat) => this.toWithAncestors(cat, ancestorDocs));
   }
 
   /**
    * Searches categories by name using regex. Returns matching categories
-   * with their parent and full ancestor chain. Supports pagination.
+   * with their parent and full ancestor chain, paginated.
    */
-  async searchCategories(term: string, page?: number, limit?: number): Promise<{ data: CategoryWithAncestors[]; pagination?: PaginationMeta }> {
-    if (page && limit) {
-      const results = await repo.searchByNamePaginated(term, page, limit);
-      if (results.length === 0) {
-        const total = await repo.countSearchResults(term);
-        return { data: [], pagination: { page, limit, total, totalPages: Math.ceil(total / limit) } };
-      }
-
-      const paginatedSet = new Set<string>();
-      for (const cat of results) {
-        for (const a of cat.ancestors) {
-          paginatedSet.add(a.toString());
-        }
-      }
-      const ancestorIds = Array.from(paginatedSet).map((id) => new Types.ObjectId(id));
-      const ancestorDocs = await repo.findByIds(ancestorIds);
-      const data = results.map((cat) => {
-        const chain = buildAncestorChain(cat.ancestors, ancestorDocs);
-        return {
-          _id: cat._id.toString(),
-          name: cat.name,
-          isActive: cat.isActive,
-          parent: cat.parent?.toString() ?? null,
-          parentCategory: chain[chain.length - 1] ?? null,
-          ancestorChain: chain,
-          createdAt: cat.createdAt,
-          updatedAt: cat.updatedAt,
-        };
-      });
-      const total = await repo.countSearchResults(term);
-      return { data, pagination: { page, limit, total, totalPages: Math.ceil(total / limit) } };
-    }
-
-    const cacheKey = cache.keys.domain.search(term);
-    const cached = await cache.get<CategoryWithAncestors[]>(cacheKey);
-    if (cached) return { data: cached };
-
-    const results = await repo.searchByName(term);
-    if (results.length === 0) return { data: [] };
-
-    const nonPaginatedSet = new Set<string>();
-    for (const cat of results) {
-      for (const a of cat.ancestors) {
-        nonPaginatedSet.add(a.toString());
-      }
-    }
-    const ancestorIds = Array.from(nonPaginatedSet).map((id) => new Types.ObjectId(id));
-
-    const ancestorDocs = await repo.findByIds(ancestorIds);
-    const data: CategoryWithAncestors[] = results.map((cat) => {
-      const chain = buildAncestorChain(cat.ancestors, ancestorDocs);
-      return {
-        _id: cat._id.toString(),
-        name: cat.name,
-        isActive: cat.isActive,
-        parent: cat.parent?.toString() ?? null,
-        parentCategory: chain[chain.length - 1] ?? null,
-        ancestorChain: chain,
-        createdAt: cat.createdAt,
-        updatedAt: cat.updatedAt,
-      };
-    });
-
-    await cache.set(cacheKey, data);
-    return { data };
+  async searchCategories(term: string, page = 1, limit = 10): Promise<{ data: CategoryWithAncestors[]; pagination: PaginationMeta }> {
+    const results = await repo.searchByNamePaginated(term, page, limit);
+    const total = await repo.countSearchResults(term);
+    const data = await this.enrichWithAncestors(results);
+    return { data, pagination: { page, limit, total, totalPages: Math.ceil(total / limit) } };
   }
 
   /**
@@ -263,18 +205,6 @@ export class CategoryService {
     await repo.deleteMany(allIds);
     await cache.invalidateAll();
     return { affectedCount: allIds.length, categoryName: category.name };
-  }
-
-  /**
-   * Creates a category if the name does not exist, otherwise returns
-   * the existing category (idempotent by name).
-   */
-  async upsertCategory(dto: CreateCategoryDto): Promise<ICategory> {
-    const existing = await repo.findByName(dto.name);
-    if (existing) {
-      return this.updateCategory(existing._id.toString(), { name: dto.name });
-    }
-    return this.createCategory(dto);
   }
 
   /**

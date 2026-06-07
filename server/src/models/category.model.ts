@@ -33,8 +33,8 @@ const CategorySchema = new Schema<ICategory>(
   }
 );
 
-// text index for scalable search
-CategorySchema.index({ name: 'text' });
+// Compound indexes supporting child lookups and subtree queries.
+// (Search uses a case-insensitive regex, so a text index would go unused.)
 CategorySchema.index({ parent: 1, isActive: 1 });
 CategorySchema.index({ ancestors: 1, isActive: 1 });
 

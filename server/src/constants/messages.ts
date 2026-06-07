@@ -8,8 +8,6 @@ export const ERR = {
   NAME_MAX_LENGTH: 'Name cannot exceed 100 characters',
   INVALID_PARENT_ID: 'Invalid parentId format',
   INVALID_ID_FORMAT: 'Invalid category ID format',
-  SEARCH_QUERY_REQUIRED: 'Search query "name" is required',
-  ROUTE_NOT_FOUND: (method: string, url: string) => `Route ${method} ${url} not found`,
   DUPLICATE_NAME: (name: string) => `Category "${name}" already exists`,
 } as const;
 
@@ -19,7 +17,6 @@ export const MSG = {
   CATEGORY_TREE_FETCHED: 'Category tree fetched successfully',
   CATEGORY_CREATED: 'Category created successfully',
   CATEGORIES_CREATED: 'Categories created successfully',
-  CATEGORY_UPSERTED: 'Category upserted successfully',
   CATEGORY_UPDATED: 'Category updated successfully',
   CATEGORY_DELETED: (name: string, count: number) => {
     const childCount = count - 1;

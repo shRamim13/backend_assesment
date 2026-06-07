@@ -5,15 +5,13 @@ import {
   validateUpdate,
   validateObjectId,
 } from '../middleware/validate.middleware';
-import { cacheMiddleware } from '../middleware/cache.middleware';
-import { config } from '../config/env.config';
 
 const router = Router();
 const categoryController = new CategoryController();
 
 router.get('/', categoryController.getCategories);
 router.get('/tree', categoryController.getCategoryTree);
-router.get('/:id', validateObjectId, cacheMiddleware(config.cache.ttlSingle), categoryController.getCategoryById);
+router.get('/:id', validateObjectId, categoryController.getCategoryById);
 router.post('/', validateCreate, categoryController.createCategory);
 router.post('/bulk', validateCreate, categoryController.createCategoryInBulk);
 router.put('/:id', validateObjectId, validateUpdate, categoryController.updateCategory);
