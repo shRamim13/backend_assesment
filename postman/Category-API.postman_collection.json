@@ -23,7 +23,7 @@
         "url": {
           "raw": "{{base_url}}/api/categories/tree",
           "host": ["{{base_url}}"],
-          "path": ["api", "categories"]
+          "path": ["api", "categories", "tree"]
         }
       }
     },
@@ -49,7 +49,7 @@
         "url": {
           "raw": "{{base_url}}/api/categories?name=watch",
           "host": ["{{base_url}}"],
-          "path": ["api", "categories", "search"],
+          "path": ["api", "categories"],
           "query": [
             { "key": "name", "value": "watch" }
           ]
@@ -63,7 +63,7 @@
         "url": {
           "raw": "{{base_url}}/api/categories?name=watch&page=1&limit=5",
           "host": ["{{base_url}}"],
-          "path": ["api", "categories", "search"],
+          "path": ["api", "categories"],
           "query": [
             { "key": "name", "value": "watch" },
             { "key": "page", "value": "1" },
@@ -206,7 +206,7 @@
       }
     },
     {
-      "name": "Activate Category (Cascade)",
+      "name": "Activate Category (Single — parent must be active)",
       "request": {
         "method": "PATCH",
         "url": {

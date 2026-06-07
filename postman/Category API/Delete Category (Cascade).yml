@@ -1,11 +1,11 @@
 info:
-  name: Delete Category (Leaf Only)
+  name: Delete Category (Cascade — deletes descendants)
   type: http
   seq: 12
 
 http:
   method: DELETE
-  url: "{{base_url}}/api/categories/{{leafCategoryId}}"
+  url: "{{base_url}}/api/categories/{{categoryId}}"
   auth: inherit
 
 settings:

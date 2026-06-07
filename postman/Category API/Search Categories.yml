@@ -5,9 +5,9 @@ info:
 
 http:
   method: GET
-  url: "{{base_url}}/api/categories/search?q=watch"
+  url: "{{base_url}}/api/categories?name=watch"
   params:
-    - name: q
+    - name: name
       value: watch
       type: query
   auth: inherit
